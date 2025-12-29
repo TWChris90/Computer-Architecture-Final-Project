@@ -1,23 +1,27 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(conv.DepthwiseConvSpec, org.scalatest.tools.Framework$$anon$1@4a27339f, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(conv.DotProductSpec, org.scalatest.tools.Framework$$anon$1@4a27339f, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(conv.PointwiseConvSpec, org.scalatest.tools.Framework$$anon$1@4a27339f, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(conv.RegularConvSpec, org.scalatest.tools.Framework$$anon$1@4a27339f, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(conv.DotProductSpec, org.scalatest.tools.Framework$$anon$1@53f39541, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(conv.PointwiseConvSpec, org.scalatest.tools.Framework$$anon$1@53f39541, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(conv.RegularConvSpec, org.scalatest.tools.Framework$$anon$1@53f39541, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(conv.DepthwiseConvSpec, org.scalatest.tools.Framework$$anon$1@53f39541, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(conv.RegularConvGoldenSpec, org.scalatest.tools.Framework$$anon$1@53f39541, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRegularConvGoldenSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- RegularConv(5,5,1,1,3,3) should match PyTorch golden (case0)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mDepthwiseConvSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- DepthwiseConv should compute depthwise convolution with positive and negative values[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mPointwiseConvSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- PointwiseConv should compute temporal convolution with positive and negative values[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mRegularConvSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- RegularConv should compute full convolution with positive and negative values[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mPointwiseConvSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- PointwiseConv should compute temporal convolution with positive and negative values[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mDotProductSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- DotProduct should compute correct output with positive values[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- DotProduct should compute correct output with negative values[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 9 seconds, 133 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 5[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 4, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 5, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 17 seconds, 337 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 6[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 5, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 6, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	conv.RegularConvSpec[0m
-[0m[[0m[0mdebug[0m] [0m[0m	conv.PointwiseConvSpec[0m
 [0m[[0m[0mdebug[0m] [0m[0m	conv.DotProductSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv.RegularConvGoldenSpec[0m
 [0m[[0m[0mdebug[0m] [0m[0m	conv.DepthwiseConvSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv.PointwiseConvSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv.RegularConvSpec[0m

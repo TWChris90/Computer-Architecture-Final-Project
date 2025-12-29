@@ -1,1 +1,1 @@
-["conv.RegularConvSpec","conv.PointwiseConvSpec","conv.DotProductSpec","conv.DepthwiseConvSpec"]
+["conv.DotProductSpec","conv.RegularConvGoldenSpec","conv.DepthwiseConvSpec","conv.PointwiseConvSpec","conv.RegularConvSpec"]

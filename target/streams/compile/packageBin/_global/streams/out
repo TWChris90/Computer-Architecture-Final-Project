@@ -1,0 +1,29 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/chris0/Chisel_Convolution_Module/target/scala-2.13/convolution_2.13-0.1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/chris0/Chisel_Convolution_Module/target/scala-2.13/classes/conv[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv/TemporalCompute.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/chris0/Chisel_Convolution_Module/target/scala-2.13/classes/conv/TemporalCompute.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv/RegularConv.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/chris0/Chisel_Convolution_Module/target/scala-2.13/classes/conv/RegularConv.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv/DotProduct$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/chris0/Chisel_Convolution_Module/target/scala-2.13/classes/conv/DotProduct$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv/DepthwiseConv.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/chris0/Chisel_Convolution_Module/target/scala-2.13/classes/conv/DepthwiseConv.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv/Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/chris0/Chisel_Convolution_Module/target/scala-2.13/classes/conv/Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv/SpatialCompute.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/chris0/Chisel_Convolution_Module/target/scala-2.13/classes/conv/SpatialCompute.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv/BaseConvolution.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/chris0/Chisel_Convolution_Module/target/scala-2.13/classes/conv/BaseConvolution.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv/DotProduct.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/chris0/Chisel_Convolution_Module/target/scala-2.13/classes/conv/DotProduct.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv/BaseConvolution$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/chris0/Chisel_Convolution_Module/target/scala-2.13/classes/conv/BaseConvolution$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv/Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/chris0/Chisel_Convolution_Module/target/scala-2.13/classes/conv/Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv/PointwiseConvolution.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/chris0/Chisel_Convolution_Module/target/scala-2.13/classes/conv/PointwiseConvolution.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv/Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/chris0/Chisel_Convolution_Module/target/scala-2.13/classes/conv/Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
