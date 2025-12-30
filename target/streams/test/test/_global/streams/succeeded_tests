@@ -1,7 +1,5 @@
 #Successful Tests
-#Tue Dec 30 02:06:23 CST 2025
-conv.PointwiseConvSpec=1767031579412
-conv.RegularConvGoldenSpec=1767031576850
-conv.DepthwiseConvSpec=1767031577596
-conv.RegularConvSpec=1767031579213
-conv.DotProductSpec=1767031583233
+#Tue Dec 30 23:43:36 CST 2025
+conv.ConvEngine2x2Spec=1767109416759
+conv.PEChain1x2Spec=1767105467368
+conv.PEArray2x2Spec=1767106299305

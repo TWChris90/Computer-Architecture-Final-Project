@@ -1,7 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvGoldenSpec.scala:49:30: not found: value kh[0m
-[0m[[0m[31merror[0m] [0m[0m        dut.io.weights(f)(c)(kh)(kw).poke(wVec(idx).S)[0m
-[0m[[0m[31merror[0m] [0m[0m                             ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvGoldenSpec.scala:49:34: not found: value kw[0m
-[0m[[0m[31merror[0m] [0m[0m        dut.io.weights(f)(c)(kh)(kw).poke(wVec(idx).S)[0m
-[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

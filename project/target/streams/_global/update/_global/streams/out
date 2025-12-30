@@ -1,7 +1,3 @@
 [0m[[0m[0mdebug[0m] [0m[0mnot up to date. inChanged = true, force = false[0m
 [0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/home/chris0/Chisel_Convolution_Module/project/"), "chisel_convolution_module-build")...[0m
-[0m[[0m[0minfo[0m] [0m[0mUpdating chisel_convolution_module-build[0m
-[0m[[0m[0minfo[0m] [0m[0mResolved chisel_convolution_module-build dependencies[0m
-[0m[[0m[0minfo[0m] [0m[0mFetching artifacts of chisel_convolution_module-build[0m
-[0m[[0m[0minfo[0m] [0m[0mFetched artifacts of chisel_convolution_module-build[0m
 [0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/home/chris0/Chisel_Convolution_Module/project/"), "chisel_convolution_module-build")[0m

@@ -8,6 +8,7 @@ lazy val root = (project in file("."))
     name := "convolution",
     libraryDependencies ++= Seq(
       "org.chipsalliance" %% "chisel" % chiselVersion,
+      "edu.berkeley.cs"   %% "chiseltest" % "6.0.0" % "test",
       "org.scalatest" %% "scalatest" % "3.2.16" % "test",
     ),
     scalacOptions ++= Seq(
