@@ -1,11 +1,10 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(conv.ConvEngine2x2Spec, org.scalatest.tools.Framework$$anon$1@1ae997bc, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mConvEngine2x2Spec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- ConvEngine2x2 should compute y = sum(x_ij * w_ij) correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- ConvEngine2x2 should work on multiple random-like vectors[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 2 seconds, 285 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 2[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(conv.FixedPointRandomBoundarySpec, org.scalatest.tools.Framework$$anon$1@5405797, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mFixedPointRandomBoundarySpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Random + boundary tests for multiple frac values should match Scala golden[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 29 seconds, 601 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 2, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	conv.ConvEngine2x2Spec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	conv.FixedPointRandomBoundarySpec[0m
