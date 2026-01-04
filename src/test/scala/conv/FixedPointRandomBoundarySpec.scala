@@ -35,7 +35,7 @@ class FixedPointRandomBoundarySpec extends AnyFreeSpec with Matchers {
     val w = 8
     val accW = 2 * w + 4
 
-    val fracs = Seq(0, 1, 4, 7) // 覆蓋：整數、輕小數、中等、接近極限
+    val fracs = Seq(0, 1, 4, 7)
 
     for (frac <- fracs) {
       val cfg = FixedCfg(dataW = w, frac = frac, mulW = 2*w, accW = accW)
@@ -46,8 +46,6 @@ class FixedPointRandomBoundarySpec extends AnyFreeSpec with Matchers {
         // dataW=8 => SInt range [-128, 127]
         val maxP =  127
         val minN = -128
-
-        // psum_in 用 accW=20 的安全範圍（這裡也用邊界 + 一些極值）
         val psCandidates = Seq(0, 1, -1, 123, -123, 1024, -1024)
 
         val boundaryCases = Seq(
@@ -71,7 +69,6 @@ class FixedPointRandomBoundarySpec extends AnyFreeSpec with Matchers {
           val out0 = dut.io.psum_out(0).peek().litValue.toInt
           val out1 = dut.io.psum_out(1).peek().litValue.toInt
 
-          // golden 計算後也要做「accW 位寬下的 two's complement wrap」
           val exp0 = clampToSIntBits(rowOut(aVec(0), bVec(0), bVec(1), ps0, frac), accW)
           val exp1 = clampToSIntBits(rowOut(aVec(1), bVec(0), bVec(1), ps1, frac), accW)
 
@@ -83,8 +80,6 @@ class FixedPointRandomBoundarySpec extends AnyFreeSpec with Matchers {
         val rng = new Random(20260103 + frac) // 固定 seed，確保可重現
         val N = 500
 
-        // 控制隨機範圍，避免 acc overflow 干擾判斷
-        // 例如 [-64, 63] 乘積最大約 4096，兩次加總約 8192，再加 psum 仍在 20-bit 安全區
         def randSmall(): Int = rng.nextInt(128) - 64
         def randPsum(): Int  = rng.nextInt(2048) - 1024
 

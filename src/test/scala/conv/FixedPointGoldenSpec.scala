@@ -27,7 +27,6 @@ class FixedPointGoldenSpec extends AnyFreeSpec with Matchers {
     val cfg = FixedCfg(dataW = w, frac = frac, mulW = 2*w, accW = 2*w + 4)
 
     simulate(new SystolicArrayRowPsumFixed(2, 2, cfg)) { dut =>
-      // 測幾組手算容易的 case + 一點負數
       val cases = Seq(
         (Seq( 16,  -8), Seq( 16,  32), Seq(0, 0)),  // 16 代表 1.0 (Q4.4), 32 代表 2.0
         (Seq(  8,  24), Seq( -8,  16), Seq(5, -6)),

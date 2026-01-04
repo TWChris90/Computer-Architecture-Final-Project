@@ -28,12 +28,10 @@ class FixedPointFormatSmokeSpec extends AnyFreeSpec with Matchers {
 
     dut.io.a_in := io.a_in
     dut.io.b_in := io.b_in
-    // dut 的 accW 是 2*w+4，比 legacy 2*w 寬；我們把 legacy psum_in 符號延伸塞進去
     dut.io.psum_in(0) := io.psum_in(0).asSInt
     dut.io.psum_in(1) := io.psum_in(1).asSInt
 
     io.ref_out := ref.io.psum_out
-    // dut_out 只取低 2*w bit（跟你之前 row-psum 版本一樣的對齊方式）
     io.dut_out(0) := dut.io.psum_out(0)(2*w-1, 0).asSInt
     io.dut_out(1) := dut.io.psum_out(1)(2*w-1, 0).asSInt
   }
