@@ -1,7 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/chris0/Chisel_Convolution_Module/src/main/scala/conv/ConvEngine2x2.scala:47:14: not found: value sext[0m
-[0m[[0m[31merror[0m] [0m[0m  val row0 = sext(pe01.io.psum_out, outW)[0m
-[0m[[0m[31merror[0m] [0m[0m             ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/chris0/Chisel_Convolution_Module/src/main/scala/conv/ConvEngine2x2.scala:48:14: not found: value sext[0m
-[0m[[0m[31merror[0m] [0m[0m  val row1 = sext(pe11.io.psum_out, outW)[0m
-[0m[[0m[31merror[0m] [0m[0m             ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chris0/Chisel_Convolution_Module/src/main/scala/conv/RegularConvFullIm2Col.scala:117:78: ';' expected but ')' found.[0m
+[0m[[0m[31merror[0m] [0m[0m    yRegs := VecInit(Seq.fill(cout)(VecInit(Seq.fill(outSize)(0.S(accW.W))))))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

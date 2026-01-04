@@ -1,10 +1,14 @@
 #Successful Tests
-#Sat Jan 03 18:22:32 CST 2026
+#Sun Jan 04 23:22:18 CST 2026
 conv.ConvEngine2x2Spec=1767109416759
 conv.PEChain1x2Spec=1767105467368
+conv.RegularConvFullIm2ColSpec=1767540138340
+conv.Im2ColStreamerNCHWSpec=1767534759546
+conv.ConvAtPointIm2ColSpec=1767534787227
+conv.PEArray2x2Spec=1767106299305
+conv.ConvAtPointMultiOutIm2ColSpec=1767539318100
 conv.SystolicArrayRegression2x2Spec=1767417787418
 conv.FixedPointFormatSmokeSpec=1767435355837
 conv.SystolicArraySpec=1767411344216
-conv.PEArray2x2Spec=1767106299305
 conv.FixedPointGoldenSpec=1767435539799
 conv.FixedPointRandomBoundarySpec=1767435752343
