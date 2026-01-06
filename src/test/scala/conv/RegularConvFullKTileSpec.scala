@@ -95,9 +95,7 @@ class RegularConvFullKTileSpec
   }
   it should "handle tail K-tile correctly when K % kTile != 0" in {
 
-    // --------------------------------------------------
     // 1. Parameters (K not divisible by kTile)
-    // --------------------------------------------------
     val cout      = 1
     val kTile     = 2
     val numKtiles = 3   // Kfull = 5 => [2,2,1]
@@ -121,9 +119,7 @@ class RegularConvFullKTileSpec
       accW      = accW
     )
 
-    // --------------------------------------------------
     // 2. Prepare Kfull = 5 data
-    // --------------------------------------------------
     // x = [1,2,3,4,5]
     // w = [10,20,30,40,50]
     // golden = sum(x_i * w_i)
@@ -149,9 +145,7 @@ class RegularConvFullKTileSpec
       Seq(50, 0)
     )
 
-    // --------------------------------------------------
     // 3. Run DUT
-    // --------------------------------------------------
     test(new RegularConvFullKTile(p, cfg)) { dut =>
 
       dut.io.start.poke(false.B)
@@ -182,9 +176,4 @@ class RegularConvFullKTileSpec
       )
     }
 }
-
-
-
-
 }
-
