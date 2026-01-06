@@ -1,11 +1,12 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(conv.RegularConvFull_SA_TiledSpec, org.scalatest.tools.Framework$$anon$1@248e9d8b, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mRegularConvFull_SA_TiledSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mRegularConvFull_SA_Tiled[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should match RegularConvFull_SA output[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 3 seconds, 343 milliseconds.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(conv.ConvAtPointMultiOut_SASpec, org.scalatest.tools.Framework$$anon$1@7b28984d, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mConvAtPointMultiOut_SASpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- ConvAtPointMultiOut_SA should match rc.py y[m=0..2, oh=0, ow=0] *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  m=1 y_out mismatch, expected=8 got=0: 0 was not equal to 8 (ConvAtPointMultiOut_SASpec.scala:106)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 12 seconds, 125 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	conv.RegularConvFull_SA_TiledSpec[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	conv.ConvAtPointMultiOut_SASpec[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
