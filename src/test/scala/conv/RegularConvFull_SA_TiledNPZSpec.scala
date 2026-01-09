@@ -29,94 +29,96 @@ class RegularConvFull_SA_TiledNPZSpec extends AnyFlatSpec with ChiselScalatestTe
     finally pw.close()
   }
 
-  it should "dump observed outputs for case0~case9 (order = (m,pos))" in {
-
-    // ====== MUST MATCH python/gen_cases_npz.py ======
-    val cin   = 1
-    val cout  = 1
-    val h     = 5
-    val w     = 5
-    val kh    = 3
-    val kw    = 3
-    val kTile = 2
+  it should "dump observed outputs for case0~case15 (order = (m,pos))" in {
 
     val cfg = FixedCfg(dataW = 8, frac = 0, mulW = 16, accW = 32)
 
-    val Kfull   = cin * kh * kw
-    val hout    = h - kh + 1
-    val wout    = w - kw + 1
-    val outSize = hout * wout
+    val baseDir  = "tests/vectors_sa_tiled"
+    val numCases = 16
 
-    val baseDir = "tests/vectors_sa_tiled"
-    val numCases = 10
-
-    // a hard timeout to avoid infinite loop if DUT stuck
-    val maxCycles = 20000
+    // generous timeout for larger cases
+    val maxCycles = 300000
 
     for (caseId <- 0 until numCases) {
       val dir = s"$baseDir/case$caseId"
+      Files.createDirectories(Paths.get(dir))
+
+      val meta = readInts(s"$dir/meta.txt")
+      require(meta.length >= 7, s"case$caseId meta.txt must have 7 lines: cin cout h w kh kw kTile")
+
+      val cin   = meta(0)
+      val cout  = meta(1)
+      val h     = meta(2)
+      val w     = meta(3)
+      val kh    = meta(4)
+      val kw    = meta(5)
+      val kTile = meta(6)
+
+      require(kTile >= 2, s"case$caseId requires kTile>=2")
+      require(h >= kh && w >= kw, s"case$caseId requires h>=kh and w>=kw")
+
+      val Kfull   = cin * kh * kw
+      val hout    = h - kh + 1
+      val wout    = w - kw + 1
+      val outSize = hout * wout
+
       val inPath  = s"$dir/input.txt"
       val wPath   = s"$dir/weight.txt"
       val outPath = s"$dir/observed.txt"
 
-      // ensure dir exists
-      Files.createDirectories(Paths.get(dir))
-
       val inVec = readInts(inPath)
       val wVec  = readInts(wPath)
 
-      require(inVec.length == cin * h * w, s"case$caseId input length mismatch: ${inVec.length}")
-      require(wVec.length == cout * Kfull, s"case$caseId weight length mismatch: ${wVec.length}")
+      require(inVec.length == cin * h * w, s"case$caseId input length mismatch: ${inVec.length} != ${cin*h*w}")
+      require(wVec.length == cout * Kfull, s"case$caseId weight length mismatch: ${wVec.length} != ${cout*Kfull}")
 
-      test(new RegularConvFull_SA_Tiled(cin, cout, h, w, kh, kw, kTile, cfg))
-        .withAnnotations(Seq(WriteVcdAnnotation)) { dut =>
+      test(new RegularConvFull_SA_Tiled(cin, cout, h, w, kh, kw, kTile, cfg)) { dut =>
 
-          // 1) poke x_in(c)(p) where p = ih*w + iw, c-major
-          var idx = 0
-          for (c <- 0 until cin) {
-            for (p <- 0 until (h*w)) {
-              dut.io.x_in(c)(p).poke(inVec(idx).S(cfg.dataW.W))
-              idx += 1
-            }
+        // poke inputs: x_in(c)(p)
+        var idx = 0
+        for (c <- 0 until cin) {
+          for (p <- 0 until (h*w)) {
+            dut.io.x_in(c)(p).poke(inVec(idx).S(cfg.dataW.W))
+            idx += 1
           }
-
-          // 2) poke w_in(m)(k) where k order = c->kh->kw, m-major
-          idx = 0
-          for (m <- 0 until cout) {
-            for (k <- 0 until Kfull) {
-              dut.io.w_in(m)(k).poke(wVec(idx).S(cfg.dataW.W))
-              idx += 1
-            }
-          }
-
-          // 3) start pulse
-          dut.io.start.poke(false.B)
-          dut.clock.step(2)
-          dut.io.start.poke(true.B)
-          dut.clock.step(1)
-          dut.io.start.poke(false.B)
-
-          // 4) wait done
-          var cycles = 0
-          while (!dut.io.done.peek().litToBoolean) {
-            dut.clock.step(1)
-            cycles += 1
-            if (cycles > maxCycles) {
-              fail(s"case$caseId timeout: done not asserted within $maxCycles cycles")
-            }
-          }
-
-          // 5) dump observed in canonical order: (m,pos) with pos=oh*wout+ow
-          val observed = for {
-            m   <- 0 until cout
-            pos <- 0 until outSize
-          } yield dut.io.y_out(m)(pos).peek().litValue
-
-          writeBigInts(outPath, observed)
-
-          // a minimal assertion: observed size correct
-          assert(observed.length == cout * outSize)
         }
+
+        // poke weights: w_in(m)(k)
+        idx = 0
+        for (m <- 0 until cout) {
+          for (k <- 0 until Kfull) {
+            dut.io.w_in(m)(k).poke(wVec(idx).S(cfg.dataW.W))
+            idx += 1
+          }
+        }
+
+        // start pulse
+        dut.io.start.poke(false.B)
+        dut.clock.step(2)
+        dut.io.start.poke(true.B)
+        dut.clock.step(1)
+        dut.io.start.poke(false.B)
+
+        // wait done
+        var cycles = 0
+        while (!dut.io.done.peek().litToBoolean) {
+          dut.clock.step(1)
+          cycles += 1
+          if (cycles > maxCycles) {
+            fail(s"case$caseId timeout: done not asserted within $maxCycles cycles")
+          }
+        }
+
+        // dump observed in canonical order: (m,pos)
+        val observed = for {
+          m   <- 0 until cout
+          pos <- 0 until outSize
+        } yield dut.io.y_out(m)(pos).peek().litValue
+
+        writeBigInts(outPath, observed)
+
+        assert(observed.length == cout * outSize)
+      }
     }
   }
 }

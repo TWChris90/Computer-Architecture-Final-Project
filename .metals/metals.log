@@ -1807,3 +1807,56 @@ WARNING: Unmatched cancel notification for request id 4482
 2026.01.06 15:34:38 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
 2026.01.06 15:34:56 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
 2026.01.06 15:35:10 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.06 15:43:53 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.06 15:43:53 WARN  no build target for: /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala[0m
+2026.01.06 15:43:53 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.06 15:43:53 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.06 15:43:53 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.06 15:44:12 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.06 15:44:21 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.06 15:44:22 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.06 15:44:22 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.06 15:44:22 WARN  Could not find semantic tokens for: file:///home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala[0m
+2026.01.06 15:44:22 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.06 15:44:22 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.06 15:44:23 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.06 15:44:32 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.06 15:44:32 WARN  no build target for: /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala[0m
+2026.01.06 15:44:32 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+Jan 06, 2026 3:45:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jan 06, 2026 5:38:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jan 07, 2026 12:51:17 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jan 07, 2026 2:06:14 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.01.07 16:35:36 INFO  Started: Metals version 1.6.4 in folders '/home/chris0/Chisel_Convolution_Module' for client Visual Studio Code 1.107.1.[0m
+2026.01.07 16:35:40 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.[0m
+2026.01.09 14:48:23 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:25 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+Jan 09, 2026 2:48:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2026.01.09 14:48:25 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+Jan 09, 2026 2:48:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2026.01.09 14:48:34 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:35 WARN  no build target for: /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala[0m
+2026.01.09 14:48:35 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:42 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:42 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:43 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:43 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:43 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:44 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:44 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:44 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:45 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:45 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:46 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+2026.01.09 14:48:49 WARN  no build target for: /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala[0m
+2026.01.09 14:48:49 INFO  no build target found for /home/chris0/Chisel_Convolution_Module/src/test/scala/conv/RegularConvFull_SA_TiledNPZSpec.scala. Using presentation compiler with project's scala-library version: 3.3.6[0m
+Jan 09, 2026 2:53:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jan 09, 2026 4:12:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

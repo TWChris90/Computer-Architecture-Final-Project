@@ -3,7 +3,7 @@ import sys
 import numpy as np
 
 BASE_DIR = "tests/vectors_sa_tiled"
-NUM_CASES = 10
+NUM_CASES = 16
 
 def read_txt_ints(path):
     return np.loadtxt(path, dtype=np.int64)
