@@ -13,7 +13,7 @@ def main():
         d = os.path.join(BASE_DIR, f"case{cid}")
         npz = np.load(os.path.join(d, "data.npz"))
         y_golden = npz["y"].astype(np.int64)     # flatten (m,pos)
-        y_obs = read_txt_ints(os.path.join(d, "observed.txt")).astype(np.int64)
+        y_obs = read_txt_ints(os.path.join(d, "observed_verilator.txt")).astype(np.int64)
 
         if y_golden.shape != y_obs.shape:
             print(f"[case{cid}] shape mismatch: golden={y_golden.shape}, obs={y_obs.shape}")
