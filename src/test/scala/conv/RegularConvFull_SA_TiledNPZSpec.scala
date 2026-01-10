@@ -65,6 +65,8 @@ class RegularConvFull_SA_TiledNPZSpec extends AnyFlatSpec with ChiselScalatestTe
       val inPath  = s"$dir/input.txt"
       val wPath   = s"$dir/weight.txt"
       val outPath = s"$dir/observed.txt"
+      val outPathPost = s"$dir/observed_post.txt"
+
 
       val inVec = readInts(inPath)
       val wVec  = readInts(wPath)
@@ -116,6 +118,13 @@ class RegularConvFull_SA_TiledNPZSpec extends AnyFlatSpec with ChiselScalatestTe
         } yield dut.io.y_out(m)(pos).peek().litValue
 
         writeBigInts(outPath, observed)
+        // dump post-processed output in canonical order: (m,pos)
+        val observedPost = for {
+          m   <- 0 until cout
+          pos <- 0 until outSize
+        } yield dut.io.y_post(m)(pos).peek().litValue
+
+        writeBigInts(outPathPost, observedPost)
 
         assert(observed.length == cout * outSize)
       }

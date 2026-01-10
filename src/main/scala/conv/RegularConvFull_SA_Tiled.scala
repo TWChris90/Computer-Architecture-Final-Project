@@ -44,6 +44,7 @@ class RegularConvFull_SA_Tiled(
     val w_in  = Input(Vec(cout, Vec(Kfull, SInt(cfg.dataW.W))))
 
     val y_out = Output(Vec(cout, Vec(outSize, SInt(cfg.accW.W))))
+    val y_post = Output(Vec(cout, Vec(outSize, UInt(8.W))))
     val done  = Output(Bool())
   })
 
@@ -60,6 +61,37 @@ class RegularConvFull_SA_Tiled(
   private val yInit: Vec[Vec[SInt]] = VecInit(Seq.fill(cout)(yInitRow))
   val yReg = RegInit(yInit)
   io.y_out := yReg
+  // -----------------------
+  // Post-processing v0 (shift=6):
+  //   p = max(0, psum)
+  //   t = (p + 2^(shift-1)) >> shift
+  //   y = clamp(t, 0..255) as UInt8
+  // -----------------------
+  private val POST_SHIFT = 6
+  private val ROUND_ADD  = (1.U << (POST_SHIFT - 1)) // 32
+
+  private def postV0(x: SInt): UInt = {
+    // ReLU in int domain
+    val reluU = Mux(x < 0.S, 0.U, x.asUInt) // guard negative before asUInt
+
+    // widen to avoid overflow when +32
+    val wide = Wire(UInt((cfg.accW + 1).W))
+    wide := reluU
+
+    val rounded = wide + ROUND_ADD
+    val shifted = rounded >> POST_SHIFT
+
+    // clamp to 0..255 (reluU is non-negative => only need upper clamp)
+    Mux(shifted >= 255.U, 255.U, shifted(7, 0))
+  }
+
+  // compute y_post from yReg (same shape, m-major pos-minor)
+  for (m <- 0 until cout) {
+    for (pos <- 0 until outSize) {
+      io.y_post(m)(pos) := postV0(yReg(m)(pos))
+    }
+  }
+
 
   val doneReg = RegInit(false.B)
   io.done := doneReg

@@ -3,7 +3,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-NUM_CASES = 10
+NUM_CASES = 16
 BASE_DIR = "tests/vectors_sa_tiled"
 
 # ===== MUST MATCH Scala Spec =====
@@ -53,13 +53,33 @@ def write_case(case_id: int, seed: int):
 
     np.savetxt(os.path.join(outdir, "input.txt"),  np.array(input_flat, dtype=np.int64), fmt="%d")
     np.savetxt(os.path.join(outdir, "weight.txt"), np.array(weight_flat, dtype=np.int64), fmt="%d")
+    
+    POST_SHIFT = 6
+    ROUND_ADD = 1 << (POST_SHIFT - 1)   # 32
 
+    def post_v0_flat(y_flat, shift=6):
+        add = 1 << (shift - 1)
+        out = []
+        for v in y_flat:
+            p = v if v > 0 else 0               # ReLU
+            t = (p + add) >> shift              # round-half-up + shift
+            if t < 0:
+                t = 0
+            elif t > 255:
+                t = 255
+            out.append(int(t))
+        return out
+
+    y_post_flat = post_v0_flat(y_flat, POST_SHIFT)
+    
     np.savez(
         os.path.join(outdir, "data.npz"),
         x=np.array(input_flat, dtype=np.int64),
         w=np.array(weight_flat, dtype=np.int64),
         y=np.array(y_flat, dtype=np.int64),  # canonical (m,pos) flatten
-        Cin=Cin, Cout=Cout, H=H, W=W, Kh=Kh, Kw=Kw, Hout=Hout, Wout=Wout
+        y_post=np.array(y_post_flat, dtype=np.int64),    # post golden (m,pos) flatten 
+        Cin=Cin, Cout=Cout, H=H, W=W, Kh=Kh, Kw=Kw, Hout=Hout, Wout=Wout,
+        post_shift=POST_SHIFT
     )
 
     print(f"[case{case_id}] wrote: input={len(input_flat)} weight={len(weight_flat)} y={len(y_flat)} seed={seed}")

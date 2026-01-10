@@ -39,6 +39,28 @@ NUM_CASES = len(CASES)
 
 LOW, HIGH = -2, 3  # randint in [LOW, HIGH)
 
+# Post-processing v0 (shift=6)
+POST_SHIFT = 6
+ROUND_ADD = 1 << (POST_SHIFT - 1)  # 32
+
+def post_v0_flat(y_flat):
+    """
+    v0 spec:
+      p = max(0, psum)
+      t = (p + 2^(shift-1)) >> shift
+      y = clamp(t, 0..255)
+    returns: list[int] (same flatten order as y_flat)
+    """
+    out = []
+    for v in y_flat:
+        p = v if v > 0 else 0
+        t = (p + ROUND_ADD) >> POST_SHIFT
+        if t > 255:
+            t = 255
+        out.append(int(t))
+    return out
+
+
 def write_meta(outdir, cin, cout, h, w, kh, kw, kTile):
     meta_path = os.path.join(outdir, "meta.txt")
     with open(meta_path, "w") as f:
@@ -81,6 +103,8 @@ def write_case(case_id: int, seed: int):
     # canonical golden y: (m,pos), pos = oh*wout + ow
     y_golden = y[0].reshape(cout, outSize).contiguous()  # (cout, outSize)
     y_flat = [int(v) for v in y_golden.reshape(-1).tolist()]  # m-major, pos-minor
+    y_post_flat = post_v0_flat(y_flat)
+
 
     # files
     write_meta(outdir, cin, cout, h, w, kh, kw, kTile)
@@ -92,6 +116,8 @@ def write_case(case_id: int, seed: int):
         x=np.array(input_flat, dtype=np.int64),
         w=np.array(weight_flat, dtype=np.int64),
         y=np.array(y_flat, dtype=np.int64),  # canonical (m,pos) flatten
+        y_post=np.array(y_post_flat, dtype=np.int64),       # post golden (m,pos) flatten
+        post_shift=np.int64(POST_SHIFT),
         cin=cin, cout=cout, h=h, w_img=w, kh=kh, kw=kw, kTile=kTile,
         hout=hout, wout=wout
     )
