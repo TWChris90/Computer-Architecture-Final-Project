@@ -1,0 +1,15 @@
+
+# sbt / scala
+/target/
+/project/target/
+/.bloop/
+/.metals/
+
+# python venv
+/venv/
+/.venv/
+# Metals / Scala build cache
+.metals/
+.bloop/
+project/target/
+target/
