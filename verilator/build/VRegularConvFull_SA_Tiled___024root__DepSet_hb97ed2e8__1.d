@@ -1,0 +1,3 @@
+VRegularConvFull_SA_Tiled___024root__DepSet_hb97ed2e8__1.o: \
+ VRegularConvFull_SA_Tiled___024root__DepSet_hb97ed2e8__1.cpp \
+ VRegularConvFull_SA_Tiled__pch.h VRegularConvFull_SA_Tiled___024root.h

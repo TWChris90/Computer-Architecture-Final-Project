@@ -1,0 +1,451 @@
+
+#include <verilated.h>
+#include <verilated_vcd_c.h>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <vector>
+#include <string>
+#include "VRegularConvFull_SA_Tiled.h"
+
+static std::vector<long long> read_ints(const std::string &path) {
+  std::ifstream ifs(path);
+  if (!ifs) throw std::runtime_error("cannot open: " + path);
+  std::vector<long long> v;
+  std::string line;
+  while (std::getline(ifs, line)) {
+    auto p = line.find('#');
+    if (p != std::string::npos) line = line.substr(0, p);
+    std::stringstream ss(line);
+    long long x;
+    if (ss >> x) v.push_back(x);
+  }
+  return v;
+}
+
+static void write_ints(const std::string &path, const std::vector<long long> &v) {
+  std::ofstream ofs(path);
+  if (!ofs) throw std::runtime_error("cannot write: " + path);
+  for (auto x : v) ofs << x << "\n";
+}
+
+int main(int argc, char** argv) {
+  Verilated::commandArgs(argc, argv);
+
+  const std::string dir = "../tests/vectors_sa_tiled/case8";
+  const auto meta = read_ints(dir + "/meta.txt");
+  if (meta.size() < 7) {
+    std::cerr << "meta.txt must have 7 lines\n";
+    return 1;
+  }
+
+  const auto inVec = read_ints(dir + "/input.txt");
+  const auto wVec  = read_ints(dir + "/weight.txt");
+
+  auto* dut = new VRegularConvFull_SA_Tiled;
+
+  Verilated::traceEverOn(true);
+  auto* tfp = new VerilatedVcdC;
+  dut->trace(tfp, 99);
+  tfp->open("wave_case8.vcd");
+
+  vluint64_t t = 0;
+  auto tick = [&]() {
+    dut->clock = 0; dut->eval(); tfp->dump(t++);
+    dut->clock = 1; dut->eval(); tfp->dump(t++);
+  };
+
+  dut->reset = 1;
+  dut->io_start = 0;
+  for (int i = 0; i < 5; i++) tick();
+  dut->reset = 0;
+  for (int i = 0; i < 2; i++) tick();
+
+  if ((int)inVec.size() != (int)144) {
+    std::cerr << "input length mismatch vs pin count: " << inVec.size() << " vs " << 144 << "\n";
+    return 1;
+  }
+  dut->io_x_in_0_0 = (int)inVec[0];
+  dut->io_x_in_0_1 = (int)inVec[1];
+  dut->io_x_in_0_2 = (int)inVec[2];
+  dut->io_x_in_0_3 = (int)inVec[3];
+  dut->io_x_in_0_4 = (int)inVec[4];
+  dut->io_x_in_0_5 = (int)inVec[5];
+  dut->io_x_in_0_6 = (int)inVec[6];
+  dut->io_x_in_0_7 = (int)inVec[7];
+  dut->io_x_in_0_8 = (int)inVec[8];
+  dut->io_x_in_0_9 = (int)inVec[9];
+  dut->io_x_in_0_10 = (int)inVec[10];
+  dut->io_x_in_0_11 = (int)inVec[11];
+  dut->io_x_in_0_12 = (int)inVec[12];
+  dut->io_x_in_0_13 = (int)inVec[13];
+  dut->io_x_in_0_14 = (int)inVec[14];
+  dut->io_x_in_0_15 = (int)inVec[15];
+  dut->io_x_in_0_16 = (int)inVec[16];
+  dut->io_x_in_0_17 = (int)inVec[17];
+  dut->io_x_in_0_18 = (int)inVec[18];
+  dut->io_x_in_0_19 = (int)inVec[19];
+  dut->io_x_in_0_20 = (int)inVec[20];
+  dut->io_x_in_0_21 = (int)inVec[21];
+  dut->io_x_in_0_22 = (int)inVec[22];
+  dut->io_x_in_0_23 = (int)inVec[23];
+  dut->io_x_in_0_24 = (int)inVec[24];
+  dut->io_x_in_0_25 = (int)inVec[25];
+  dut->io_x_in_0_26 = (int)inVec[26];
+  dut->io_x_in_0_27 = (int)inVec[27];
+  dut->io_x_in_0_28 = (int)inVec[28];
+  dut->io_x_in_0_29 = (int)inVec[29];
+  dut->io_x_in_0_30 = (int)inVec[30];
+  dut->io_x_in_0_31 = (int)inVec[31];
+  dut->io_x_in_0_32 = (int)inVec[32];
+  dut->io_x_in_0_33 = (int)inVec[33];
+  dut->io_x_in_0_34 = (int)inVec[34];
+  dut->io_x_in_0_35 = (int)inVec[35];
+  dut->io_x_in_1_0 = (int)inVec[36];
+  dut->io_x_in_1_1 = (int)inVec[37];
+  dut->io_x_in_1_2 = (int)inVec[38];
+  dut->io_x_in_1_3 = (int)inVec[39];
+  dut->io_x_in_1_4 = (int)inVec[40];
+  dut->io_x_in_1_5 = (int)inVec[41];
+  dut->io_x_in_1_6 = (int)inVec[42];
+  dut->io_x_in_1_7 = (int)inVec[43];
+  dut->io_x_in_1_8 = (int)inVec[44];
+  dut->io_x_in_1_9 = (int)inVec[45];
+  dut->io_x_in_1_10 = (int)inVec[46];
+  dut->io_x_in_1_11 = (int)inVec[47];
+  dut->io_x_in_1_12 = (int)inVec[48];
+  dut->io_x_in_1_13 = (int)inVec[49];
+  dut->io_x_in_1_14 = (int)inVec[50];
+  dut->io_x_in_1_15 = (int)inVec[51];
+  dut->io_x_in_1_16 = (int)inVec[52];
+  dut->io_x_in_1_17 = (int)inVec[53];
+  dut->io_x_in_1_18 = (int)inVec[54];
+  dut->io_x_in_1_19 = (int)inVec[55];
+  dut->io_x_in_1_20 = (int)inVec[56];
+  dut->io_x_in_1_21 = (int)inVec[57];
+  dut->io_x_in_1_22 = (int)inVec[58];
+  dut->io_x_in_1_23 = (int)inVec[59];
+  dut->io_x_in_1_24 = (int)inVec[60];
+  dut->io_x_in_1_25 = (int)inVec[61];
+  dut->io_x_in_1_26 = (int)inVec[62];
+  dut->io_x_in_1_27 = (int)inVec[63];
+  dut->io_x_in_1_28 = (int)inVec[64];
+  dut->io_x_in_1_29 = (int)inVec[65];
+  dut->io_x_in_1_30 = (int)inVec[66];
+  dut->io_x_in_1_31 = (int)inVec[67];
+  dut->io_x_in_1_32 = (int)inVec[68];
+  dut->io_x_in_1_33 = (int)inVec[69];
+  dut->io_x_in_1_34 = (int)inVec[70];
+  dut->io_x_in_1_35 = (int)inVec[71];
+  dut->io_x_in_2_0 = (int)inVec[72];
+  dut->io_x_in_2_1 = (int)inVec[73];
+  dut->io_x_in_2_2 = (int)inVec[74];
+  dut->io_x_in_2_3 = (int)inVec[75];
+  dut->io_x_in_2_4 = (int)inVec[76];
+  dut->io_x_in_2_5 = (int)inVec[77];
+  dut->io_x_in_2_6 = (int)inVec[78];
+  dut->io_x_in_2_7 = (int)inVec[79];
+  dut->io_x_in_2_8 = (int)inVec[80];
+  dut->io_x_in_2_9 = (int)inVec[81];
+  dut->io_x_in_2_10 = (int)inVec[82];
+  dut->io_x_in_2_11 = (int)inVec[83];
+  dut->io_x_in_2_12 = (int)inVec[84];
+  dut->io_x_in_2_13 = (int)inVec[85];
+  dut->io_x_in_2_14 = (int)inVec[86];
+  dut->io_x_in_2_15 = (int)inVec[87];
+  dut->io_x_in_2_16 = (int)inVec[88];
+  dut->io_x_in_2_17 = (int)inVec[89];
+  dut->io_x_in_2_18 = (int)inVec[90];
+  dut->io_x_in_2_19 = (int)inVec[91];
+  dut->io_x_in_2_20 = (int)inVec[92];
+  dut->io_x_in_2_21 = (int)inVec[93];
+  dut->io_x_in_2_22 = (int)inVec[94];
+  dut->io_x_in_2_23 = (int)inVec[95];
+  dut->io_x_in_2_24 = (int)inVec[96];
+  dut->io_x_in_2_25 = (int)inVec[97];
+  dut->io_x_in_2_26 = (int)inVec[98];
+  dut->io_x_in_2_27 = (int)inVec[99];
+  dut->io_x_in_2_28 = (int)inVec[100];
+  dut->io_x_in_2_29 = (int)inVec[101];
+  dut->io_x_in_2_30 = (int)inVec[102];
+  dut->io_x_in_2_31 = (int)inVec[103];
+  dut->io_x_in_2_32 = (int)inVec[104];
+  dut->io_x_in_2_33 = (int)inVec[105];
+  dut->io_x_in_2_34 = (int)inVec[106];
+  dut->io_x_in_2_35 = (int)inVec[107];
+  dut->io_x_in_3_0 = (int)inVec[108];
+  dut->io_x_in_3_1 = (int)inVec[109];
+  dut->io_x_in_3_2 = (int)inVec[110];
+  dut->io_x_in_3_3 = (int)inVec[111];
+  dut->io_x_in_3_4 = (int)inVec[112];
+  dut->io_x_in_3_5 = (int)inVec[113];
+  dut->io_x_in_3_6 = (int)inVec[114];
+  dut->io_x_in_3_7 = (int)inVec[115];
+  dut->io_x_in_3_8 = (int)inVec[116];
+  dut->io_x_in_3_9 = (int)inVec[117];
+  dut->io_x_in_3_10 = (int)inVec[118];
+  dut->io_x_in_3_11 = (int)inVec[119];
+  dut->io_x_in_3_12 = (int)inVec[120];
+  dut->io_x_in_3_13 = (int)inVec[121];
+  dut->io_x_in_3_14 = (int)inVec[122];
+  dut->io_x_in_3_15 = (int)inVec[123];
+  dut->io_x_in_3_16 = (int)inVec[124];
+  dut->io_x_in_3_17 = (int)inVec[125];
+  dut->io_x_in_3_18 = (int)inVec[126];
+  dut->io_x_in_3_19 = (int)inVec[127];
+  dut->io_x_in_3_20 = (int)inVec[128];
+  dut->io_x_in_3_21 = (int)inVec[129];
+  dut->io_x_in_3_22 = (int)inVec[130];
+  dut->io_x_in_3_23 = (int)inVec[131];
+  dut->io_x_in_3_24 = (int)inVec[132];
+  dut->io_x_in_3_25 = (int)inVec[133];
+  dut->io_x_in_3_26 = (int)inVec[134];
+  dut->io_x_in_3_27 = (int)inVec[135];
+  dut->io_x_in_3_28 = (int)inVec[136];
+  dut->io_x_in_3_29 = (int)inVec[137];
+  dut->io_x_in_3_30 = (int)inVec[138];
+  dut->io_x_in_3_31 = (int)inVec[139];
+  dut->io_x_in_3_32 = (int)inVec[140];
+  dut->io_x_in_3_33 = (int)inVec[141];
+  dut->io_x_in_3_34 = (int)inVec[142];
+  dut->io_x_in_3_35 = (int)inVec[143];
+
+  if ((int)wVec.size() != (int)144) {
+    std::cerr << "weight length mismatch vs pin count: " << wVec.size() << " vs " << 144 << "\n";
+    return 1;
+  }
+  dut->io_w_in_0_0 = (int)wVec[0];
+  dut->io_w_in_0_1 = (int)wVec[1];
+  dut->io_w_in_0_2 = (int)wVec[2];
+  dut->io_w_in_0_3 = (int)wVec[3];
+  dut->io_w_in_0_4 = (int)wVec[4];
+  dut->io_w_in_0_5 = (int)wVec[5];
+  dut->io_w_in_0_6 = (int)wVec[6];
+  dut->io_w_in_0_7 = (int)wVec[7];
+  dut->io_w_in_0_8 = (int)wVec[8];
+  dut->io_w_in_0_9 = (int)wVec[9];
+  dut->io_w_in_0_10 = (int)wVec[10];
+  dut->io_w_in_0_11 = (int)wVec[11];
+  dut->io_w_in_0_12 = (int)wVec[12];
+  dut->io_w_in_0_13 = (int)wVec[13];
+  dut->io_w_in_0_14 = (int)wVec[14];
+  dut->io_w_in_0_15 = (int)wVec[15];
+  dut->io_w_in_0_16 = (int)wVec[16];
+  dut->io_w_in_0_17 = (int)wVec[17];
+  dut->io_w_in_0_18 = (int)wVec[18];
+  dut->io_w_in_0_19 = (int)wVec[19];
+  dut->io_w_in_0_20 = (int)wVec[20];
+  dut->io_w_in_0_21 = (int)wVec[21];
+  dut->io_w_in_0_22 = (int)wVec[22];
+  dut->io_w_in_0_23 = (int)wVec[23];
+  dut->io_w_in_0_24 = (int)wVec[24];
+  dut->io_w_in_0_25 = (int)wVec[25];
+  dut->io_w_in_0_26 = (int)wVec[26];
+  dut->io_w_in_0_27 = (int)wVec[27];
+  dut->io_w_in_0_28 = (int)wVec[28];
+  dut->io_w_in_0_29 = (int)wVec[29];
+  dut->io_w_in_0_30 = (int)wVec[30];
+  dut->io_w_in_0_31 = (int)wVec[31];
+  dut->io_w_in_0_32 = (int)wVec[32];
+  dut->io_w_in_0_33 = (int)wVec[33];
+  dut->io_w_in_0_34 = (int)wVec[34];
+  dut->io_w_in_0_35 = (int)wVec[35];
+  dut->io_w_in_1_0 = (int)wVec[36];
+  dut->io_w_in_1_1 = (int)wVec[37];
+  dut->io_w_in_1_2 = (int)wVec[38];
+  dut->io_w_in_1_3 = (int)wVec[39];
+  dut->io_w_in_1_4 = (int)wVec[40];
+  dut->io_w_in_1_5 = (int)wVec[41];
+  dut->io_w_in_1_6 = (int)wVec[42];
+  dut->io_w_in_1_7 = (int)wVec[43];
+  dut->io_w_in_1_8 = (int)wVec[44];
+  dut->io_w_in_1_9 = (int)wVec[45];
+  dut->io_w_in_1_10 = (int)wVec[46];
+  dut->io_w_in_1_11 = (int)wVec[47];
+  dut->io_w_in_1_12 = (int)wVec[48];
+  dut->io_w_in_1_13 = (int)wVec[49];
+  dut->io_w_in_1_14 = (int)wVec[50];
+  dut->io_w_in_1_15 = (int)wVec[51];
+  dut->io_w_in_1_16 = (int)wVec[52];
+  dut->io_w_in_1_17 = (int)wVec[53];
+  dut->io_w_in_1_18 = (int)wVec[54];
+  dut->io_w_in_1_19 = (int)wVec[55];
+  dut->io_w_in_1_20 = (int)wVec[56];
+  dut->io_w_in_1_21 = (int)wVec[57];
+  dut->io_w_in_1_22 = (int)wVec[58];
+  dut->io_w_in_1_23 = (int)wVec[59];
+  dut->io_w_in_1_24 = (int)wVec[60];
+  dut->io_w_in_1_25 = (int)wVec[61];
+  dut->io_w_in_1_26 = (int)wVec[62];
+  dut->io_w_in_1_27 = (int)wVec[63];
+  dut->io_w_in_1_28 = (int)wVec[64];
+  dut->io_w_in_1_29 = (int)wVec[65];
+  dut->io_w_in_1_30 = (int)wVec[66];
+  dut->io_w_in_1_31 = (int)wVec[67];
+  dut->io_w_in_1_32 = (int)wVec[68];
+  dut->io_w_in_1_33 = (int)wVec[69];
+  dut->io_w_in_1_34 = (int)wVec[70];
+  dut->io_w_in_1_35 = (int)wVec[71];
+  dut->io_w_in_2_0 = (int)wVec[72];
+  dut->io_w_in_2_1 = (int)wVec[73];
+  dut->io_w_in_2_2 = (int)wVec[74];
+  dut->io_w_in_2_3 = (int)wVec[75];
+  dut->io_w_in_2_4 = (int)wVec[76];
+  dut->io_w_in_2_5 = (int)wVec[77];
+  dut->io_w_in_2_6 = (int)wVec[78];
+  dut->io_w_in_2_7 = (int)wVec[79];
+  dut->io_w_in_2_8 = (int)wVec[80];
+  dut->io_w_in_2_9 = (int)wVec[81];
+  dut->io_w_in_2_10 = (int)wVec[82];
+  dut->io_w_in_2_11 = (int)wVec[83];
+  dut->io_w_in_2_12 = (int)wVec[84];
+  dut->io_w_in_2_13 = (int)wVec[85];
+  dut->io_w_in_2_14 = (int)wVec[86];
+  dut->io_w_in_2_15 = (int)wVec[87];
+  dut->io_w_in_2_16 = (int)wVec[88];
+  dut->io_w_in_2_17 = (int)wVec[89];
+  dut->io_w_in_2_18 = (int)wVec[90];
+  dut->io_w_in_2_19 = (int)wVec[91];
+  dut->io_w_in_2_20 = (int)wVec[92];
+  dut->io_w_in_2_21 = (int)wVec[93];
+  dut->io_w_in_2_22 = (int)wVec[94];
+  dut->io_w_in_2_23 = (int)wVec[95];
+  dut->io_w_in_2_24 = (int)wVec[96];
+  dut->io_w_in_2_25 = (int)wVec[97];
+  dut->io_w_in_2_26 = (int)wVec[98];
+  dut->io_w_in_2_27 = (int)wVec[99];
+  dut->io_w_in_2_28 = (int)wVec[100];
+  dut->io_w_in_2_29 = (int)wVec[101];
+  dut->io_w_in_2_30 = (int)wVec[102];
+  dut->io_w_in_2_31 = (int)wVec[103];
+  dut->io_w_in_2_32 = (int)wVec[104];
+  dut->io_w_in_2_33 = (int)wVec[105];
+  dut->io_w_in_2_34 = (int)wVec[106];
+  dut->io_w_in_2_35 = (int)wVec[107];
+  dut->io_w_in_3_0 = (int)wVec[108];
+  dut->io_w_in_3_1 = (int)wVec[109];
+  dut->io_w_in_3_2 = (int)wVec[110];
+  dut->io_w_in_3_3 = (int)wVec[111];
+  dut->io_w_in_3_4 = (int)wVec[112];
+  dut->io_w_in_3_5 = (int)wVec[113];
+  dut->io_w_in_3_6 = (int)wVec[114];
+  dut->io_w_in_3_7 = (int)wVec[115];
+  dut->io_w_in_3_8 = (int)wVec[116];
+  dut->io_w_in_3_9 = (int)wVec[117];
+  dut->io_w_in_3_10 = (int)wVec[118];
+  dut->io_w_in_3_11 = (int)wVec[119];
+  dut->io_w_in_3_12 = (int)wVec[120];
+  dut->io_w_in_3_13 = (int)wVec[121];
+  dut->io_w_in_3_14 = (int)wVec[122];
+  dut->io_w_in_3_15 = (int)wVec[123];
+  dut->io_w_in_3_16 = (int)wVec[124];
+  dut->io_w_in_3_17 = (int)wVec[125];
+  dut->io_w_in_3_18 = (int)wVec[126];
+  dut->io_w_in_3_19 = (int)wVec[127];
+  dut->io_w_in_3_20 = (int)wVec[128];
+  dut->io_w_in_3_21 = (int)wVec[129];
+  dut->io_w_in_3_22 = (int)wVec[130];
+  dut->io_w_in_3_23 = (int)wVec[131];
+  dut->io_w_in_3_24 = (int)wVec[132];
+  dut->io_w_in_3_25 = (int)wVec[133];
+  dut->io_w_in_3_26 = (int)wVec[134];
+  dut->io_w_in_3_27 = (int)wVec[135];
+  dut->io_w_in_3_28 = (int)wVec[136];
+  dut->io_w_in_3_29 = (int)wVec[137];
+  dut->io_w_in_3_30 = (int)wVec[138];
+  dut->io_w_in_3_31 = (int)wVec[139];
+  dut->io_w_in_3_32 = (int)wVec[140];
+  dut->io_w_in_3_33 = (int)wVec[141];
+  dut->io_w_in_3_34 = (int)wVec[142];
+  dut->io_w_in_3_35 = (int)wVec[143];
+
+  dut->io_start = 1;
+  tick();
+  dut->io_start = 0;
+
+  const int maxCycles = 300000;
+  int cyc = 0;
+  while (!dut->io_done) {
+    tick();
+    cyc++;
+    if (cyc > maxCycles) {
+      std::cerr << "TIMEOUT\n";
+      return 1;
+    }
+  }
+
+  std::vector<long long> observed;
+  observed.reserve(64);
+  observed.push_back((int32_t)dut->io_y_out_0_0);
+  observed.push_back((int32_t)dut->io_y_out_0_1);
+  observed.push_back((int32_t)dut->io_y_out_0_2);
+  observed.push_back((int32_t)dut->io_y_out_0_3);
+  observed.push_back((int32_t)dut->io_y_out_0_4);
+  observed.push_back((int32_t)dut->io_y_out_0_5);
+  observed.push_back((int32_t)dut->io_y_out_0_6);
+  observed.push_back((int32_t)dut->io_y_out_0_7);
+  observed.push_back((int32_t)dut->io_y_out_0_8);
+  observed.push_back((int32_t)dut->io_y_out_0_9);
+  observed.push_back((int32_t)dut->io_y_out_0_10);
+  observed.push_back((int32_t)dut->io_y_out_0_11);
+  observed.push_back((int32_t)dut->io_y_out_0_12);
+  observed.push_back((int32_t)dut->io_y_out_0_13);
+  observed.push_back((int32_t)dut->io_y_out_0_14);
+  observed.push_back((int32_t)dut->io_y_out_0_15);
+  observed.push_back((int32_t)dut->io_y_out_1_0);
+  observed.push_back((int32_t)dut->io_y_out_1_1);
+  observed.push_back((int32_t)dut->io_y_out_1_2);
+  observed.push_back((int32_t)dut->io_y_out_1_3);
+  observed.push_back((int32_t)dut->io_y_out_1_4);
+  observed.push_back((int32_t)dut->io_y_out_1_5);
+  observed.push_back((int32_t)dut->io_y_out_1_6);
+  observed.push_back((int32_t)dut->io_y_out_1_7);
+  observed.push_back((int32_t)dut->io_y_out_1_8);
+  observed.push_back((int32_t)dut->io_y_out_1_9);
+  observed.push_back((int32_t)dut->io_y_out_1_10);
+  observed.push_back((int32_t)dut->io_y_out_1_11);
+  observed.push_back((int32_t)dut->io_y_out_1_12);
+  observed.push_back((int32_t)dut->io_y_out_1_13);
+  observed.push_back((int32_t)dut->io_y_out_1_14);
+  observed.push_back((int32_t)dut->io_y_out_1_15);
+  observed.push_back((int32_t)dut->io_y_out_2_0);
+  observed.push_back((int32_t)dut->io_y_out_2_1);
+  observed.push_back((int32_t)dut->io_y_out_2_2);
+  observed.push_back((int32_t)dut->io_y_out_2_3);
+  observed.push_back((int32_t)dut->io_y_out_2_4);
+  observed.push_back((int32_t)dut->io_y_out_2_5);
+  observed.push_back((int32_t)dut->io_y_out_2_6);
+  observed.push_back((int32_t)dut->io_y_out_2_7);
+  observed.push_back((int32_t)dut->io_y_out_2_8);
+  observed.push_back((int32_t)dut->io_y_out_2_9);
+  observed.push_back((int32_t)dut->io_y_out_2_10);
+  observed.push_back((int32_t)dut->io_y_out_2_11);
+  observed.push_back((int32_t)dut->io_y_out_2_12);
+  observed.push_back((int32_t)dut->io_y_out_2_13);
+  observed.push_back((int32_t)dut->io_y_out_2_14);
+  observed.push_back((int32_t)dut->io_y_out_2_15);
+  observed.push_back((int32_t)dut->io_y_out_3_0);
+  observed.push_back((int32_t)dut->io_y_out_3_1);
+  observed.push_back((int32_t)dut->io_y_out_3_2);
+  observed.push_back((int32_t)dut->io_y_out_3_3);
+  observed.push_back((int32_t)dut->io_y_out_3_4);
+  observed.push_back((int32_t)dut->io_y_out_3_5);
+  observed.push_back((int32_t)dut->io_y_out_3_6);
+  observed.push_back((int32_t)dut->io_y_out_3_7);
+  observed.push_back((int32_t)dut->io_y_out_3_8);
+  observed.push_back((int32_t)dut->io_y_out_3_9);
+  observed.push_back((int32_t)dut->io_y_out_3_10);
+  observed.push_back((int32_t)dut->io_y_out_3_11);
+  observed.push_back((int32_t)dut->io_y_out_3_12);
+  observed.push_back((int32_t)dut->io_y_out_3_13);
+  observed.push_back((int32_t)dut->io_y_out_3_14);
+  observed.push_back((int32_t)dut->io_y_out_3_15);
+
+  write_ints(dir + "/observed_verilator.txt", observed);
+  std::cout << "[case8] wrote " << observed.size() << " values, cycles=" << cyc << "\n";
+
+  tfp->close();
+  delete tfp;
+  delete dut;
+  return 0;
+}
