@@ -819,6 +819,80 @@ class alignas(VL_CACHE_LINE_BYTES) VRegularConvFull_SA_Tiled___024root final : p
         VL_IN8(io_w_in_7_69,7,0);
         VL_IN8(io_w_in_7_70,7,0);
         VL_IN8(io_w_in_7_71,7,0);
+        VL_OUT8(io_y_post_0_0,7,0);
+        VL_OUT8(io_y_post_0_1,7,0);
+        VL_OUT8(io_y_post_0_2,7,0);
+        VL_OUT8(io_y_post_0_3,7,0);
+        VL_OUT8(io_y_post_0_4,7,0);
+        VL_OUT8(io_y_post_0_5,7,0);
+        VL_OUT8(io_y_post_0_6,7,0);
+        VL_OUT8(io_y_post_0_7,7,0);
+        VL_OUT8(io_y_post_0_8,7,0);
+        VL_OUT8(io_y_post_1_0,7,0);
+        VL_OUT8(io_y_post_1_1,7,0);
+        VL_OUT8(io_y_post_1_2,7,0);
+        VL_OUT8(io_y_post_1_3,7,0);
+        VL_OUT8(io_y_post_1_4,7,0);
+        VL_OUT8(io_y_post_1_5,7,0);
+        VL_OUT8(io_y_post_1_6,7,0);
+        VL_OUT8(io_y_post_1_7,7,0);
+        VL_OUT8(io_y_post_1_8,7,0);
+        VL_OUT8(io_y_post_2_0,7,0);
+        VL_OUT8(io_y_post_2_1,7,0);
+        VL_OUT8(io_y_post_2_2,7,0);
+        VL_OUT8(io_y_post_2_3,7,0);
+        VL_OUT8(io_y_post_2_4,7,0);
+        VL_OUT8(io_y_post_2_5,7,0);
+        VL_OUT8(io_y_post_2_6,7,0);
+        VL_OUT8(io_y_post_2_7,7,0);
+        VL_OUT8(io_y_post_2_8,7,0);
+        VL_OUT8(io_y_post_3_0,7,0);
+        VL_OUT8(io_y_post_3_1,7,0);
+        VL_OUT8(io_y_post_3_2,7,0);
+        VL_OUT8(io_y_post_3_3,7,0);
+        VL_OUT8(io_y_post_3_4,7,0);
+        VL_OUT8(io_y_post_3_5,7,0);
+        VL_OUT8(io_y_post_3_6,7,0);
+        VL_OUT8(io_y_post_3_7,7,0);
+        VL_OUT8(io_y_post_3_8,7,0);
+        VL_OUT8(io_y_post_4_0,7,0);
+        VL_OUT8(io_y_post_4_1,7,0);
+        VL_OUT8(io_y_post_4_2,7,0);
+        VL_OUT8(io_y_post_4_3,7,0);
+        VL_OUT8(io_y_post_4_4,7,0);
+        VL_OUT8(io_y_post_4_5,7,0);
+        VL_OUT8(io_y_post_4_6,7,0);
+        VL_OUT8(io_y_post_4_7,7,0);
+        VL_OUT8(io_y_post_4_8,7,0);
+        VL_OUT8(io_y_post_5_0,7,0);
+        VL_OUT8(io_y_post_5_1,7,0);
+        VL_OUT8(io_y_post_5_2,7,0);
+        VL_OUT8(io_y_post_5_3,7,0);
+        VL_OUT8(io_y_post_5_4,7,0);
+        VL_OUT8(io_y_post_5_5,7,0);
+        VL_OUT8(io_y_post_5_6,7,0);
+        VL_OUT8(io_y_post_5_7,7,0);
+    };
+    struct {
+        VL_OUT8(io_y_post_5_8,7,0);
+        VL_OUT8(io_y_post_6_0,7,0);
+        VL_OUT8(io_y_post_6_1,7,0);
+        VL_OUT8(io_y_post_6_2,7,0);
+        VL_OUT8(io_y_post_6_3,7,0);
+        VL_OUT8(io_y_post_6_4,7,0);
+        VL_OUT8(io_y_post_6_5,7,0);
+        VL_OUT8(io_y_post_6_6,7,0);
+        VL_OUT8(io_y_post_6_7,7,0);
+        VL_OUT8(io_y_post_6_8,7,0);
+        VL_OUT8(io_y_post_7_0,7,0);
+        VL_OUT8(io_y_post_7_1,7,0);
+        VL_OUT8(io_y_post_7_2,7,0);
+        VL_OUT8(io_y_post_7_3,7,0);
+        VL_OUT8(io_y_post_7_4,7,0);
+        VL_OUT8(io_y_post_7_5,7,0);
+        VL_OUT8(io_y_post_7_6,7,0);
+        VL_OUT8(io_y_post_7_7,7,0);
+        VL_OUT8(io_y_post_7_8,7,0);
         VL_OUT8(io_done,0,0);
         CData/*7:0*/ RegularConvFull_SA_Tiled__DOT___im2col_io_a_out;
         CData/*0:0*/ RegularConvFull_SA_Tiled__DOT__doneReg;
@@ -864,6 +938,8 @@ class alignas(VL_CACHE_LINE_BYTES) VRegularConvFull_SA_Tiled___024root final : p
         CData/*0:0*/ RegularConvFull_SA_Tiled__DOT___GEN_8;
         CData/*0:0*/ RegularConvFull_SA_Tiled__DOT____Vcellinp__im2col__io_start;
         CData/*7:0*/ RegularConvFull_SA_Tiled__DOT____Vcellinp__core__io_x_tile_9;
+    };
+    struct {
         CData/*7:0*/ RegularConvFull_SA_Tiled__DOT____Vcellinp__core__io_x_tile_8;
         CData/*7:0*/ RegularConvFull_SA_Tiled__DOT____Vcellinp__core__io_x_tile_7;
         CData/*7:0*/ RegularConvFull_SA_Tiled__DOT____Vcellinp__core__io_x_tile_6;
@@ -872,8 +948,6 @@ class alignas(VL_CACHE_LINE_BYTES) VRegularConvFull_SA_Tiled___024root final : p
         CData/*7:0*/ RegularConvFull_SA_Tiled__DOT____Vcellinp__core__io_x_tile_3;
         CData/*7:0*/ RegularConvFull_SA_Tiled__DOT____Vcellinp__core__io_x_tile_2;
         CData/*7:0*/ RegularConvFull_SA_Tiled__DOT____Vcellinp__core__io_x_tile_1;
-    };
-    struct {
         CData/*7:0*/ RegularConvFull_SA_Tiled__DOT____Vcellinp__core__io_x_tile_0;
         CData/*0:0*/ RegularConvFull_SA_Tiled__DOT__unnamedblk1__DOT___GEN_9;
         CData/*0:0*/ RegularConvFull_SA_Tiled__DOT__unnamedblk1__DOT___GEN_10;
@@ -930,6 +1004,8 @@ class alignas(VL_CACHE_LINE_BYTES) VRegularConvFull_SA_Tiled___024root final : p
         CData/*7:0*/ __VdfgTmp_h28503764__0;
         CData/*7:0*/ __VdfgTmp_h2995ca2a__0;
         CData/*7:0*/ __VdfgTmp_h8c739e36__0;
+    };
+    struct {
         CData/*7:0*/ __VdfgTmp_h7eb59b69__0;
         CData/*7:0*/ __VdfgTmp_h485137fe__0;
         CData/*7:0*/ __VdfgTmp_h49ed35d0__0;
@@ -938,8 +1014,6 @@ class alignas(VL_CACHE_LINE_BYTES) VRegularConvFull_SA_Tiled___024root final : p
         CData/*7:0*/ __VdfgTmp_h6fa6cc67__0;
         CData/*7:0*/ __VdfgTmp_h8ddebbb9__0;
         CData/*7:0*/ __VdfgTmp_hb3c4d37d__0;
-    };
-    struct {
         CData/*7:0*/ __VdfgTmp_hb2be3e43__0;
         CData/*7:0*/ __VdfgTmp_h584c6713__0;
         CData/*7:0*/ __VdfgTmp_h6d8e7a40__0;
@@ -996,6 +1070,8 @@ class alignas(VL_CACHE_LINE_BYTES) VRegularConvFull_SA_Tiled___024root final : p
         CData/*0:0*/ __Vtrigprevexpr___TOP__clock__0;
         CData/*0:0*/ __VactContinue;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe__DOT__prod;
+    };
+    struct {
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_1__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_2__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_3__DOT__prod;
@@ -1004,8 +1080,6 @@ class alignas(VL_CACHE_LINE_BYTES) VRegularConvFull_SA_Tiled___024root final : p
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_6__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_7__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_8__DOT__prod;
-    };
-    struct {
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_9__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_10__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_11__DOT__prod;
@@ -1062,6 +1136,8 @@ class alignas(VL_CACHE_LINE_BYTES) VRegularConvFull_SA_Tiled___024root final : p
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_62__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_63__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_64__DOT__prod;
+    };
+    struct {
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_65__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_66__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_67__DOT__prod;
@@ -1070,8 +1146,6 @@ class alignas(VL_CACHE_LINE_BYTES) VRegularConvFull_SA_Tiled___024root final : p
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_70__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_71__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_72__DOT__prod;
-    };
-    struct {
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_73__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_74__DOT__prod;
         SData/*15:0*/ RegularConvFull_SA_Tiled__DOT__core__DOT__sa__DOT__pe_75__DOT__prod;
@@ -1128,6 +1202,8 @@ class alignas(VL_CACHE_LINE_BYTES) VRegularConvFull_SA_Tiled___024root final : p
         VL_OUT(io_y_out_4_0,31,0);
         VL_OUT(io_y_out_4_1,31,0);
         VL_OUT(io_y_out_4_2,31,0);
+    };
+    struct {
         VL_OUT(io_y_out_4_3,31,0);
         VL_OUT(io_y_out_4_4,31,0);
         VL_OUT(io_y_out_4_5,31,0);
@@ -1136,8 +1212,6 @@ class alignas(VL_CACHE_LINE_BYTES) VRegularConvFull_SA_Tiled___024root final : p
         VL_OUT(io_y_out_4_8,31,0);
         VL_OUT(io_y_out_5_0,31,0);
         VL_OUT(io_y_out_5_1,31,0);
-    };
-    struct {
         VL_OUT(io_y_out_5_2,31,0);
         VL_OUT(io_y_out_5_3,31,0);
         VL_OUT(io_y_out_5_4,31,0);
@@ -1194,6 +1268,8 @@ class alignas(VL_CACHE_LINE_BYTES) VRegularConvFull_SA_Tiled___024root final : p
         IData/*31:0*/ RegularConvFull_SA_Tiled__DOT__yReg_2_2;
         IData/*31:0*/ RegularConvFull_SA_Tiled__DOT__yReg_2_3;
         IData/*31:0*/ RegularConvFull_SA_Tiled__DOT__yReg_2_4;
+    };
+    struct {
         IData/*31:0*/ RegularConvFull_SA_Tiled__DOT__yReg_2_5;
         IData/*31:0*/ RegularConvFull_SA_Tiled__DOT__yReg_2_6;
         IData/*31:0*/ RegularConvFull_SA_Tiled__DOT__yReg_2_7;
@@ -1202,8 +1278,6 @@ class alignas(VL_CACHE_LINE_BYTES) VRegularConvFull_SA_Tiled___024root final : p
         IData/*31:0*/ RegularConvFull_SA_Tiled__DOT__yReg_3_1;
         IData/*31:0*/ RegularConvFull_SA_Tiled__DOT__yReg_3_2;
         IData/*31:0*/ RegularConvFull_SA_Tiled__DOT__yReg_3_3;
-    };
-    struct {
         IData/*31:0*/ RegularConvFull_SA_Tiled__DOT__yReg_3_4;
         IData/*31:0*/ RegularConvFull_SA_Tiled__DOT__yReg_3_5;
         IData/*31:0*/ RegularConvFull_SA_Tiled__DOT__yReg_3_6;

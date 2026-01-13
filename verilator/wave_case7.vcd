@@ -231,7 +231,82 @@ $timescale 1ps $end
   $var wire 32 Q$ io_y_out_2_22 [31:0] $end
   $var wire 32 R$ io_y_out_2_23 [31:0] $end
   $var wire 32 S$ io_y_out_2_24 [31:0] $end
-  $var wire 1 T$ io_done $end
+  $var wire 8 T$ io_y_post_0_0 [7:0] $end
+  $var wire 8 U$ io_y_post_0_1 [7:0] $end
+  $var wire 8 V$ io_y_post_0_2 [7:0] $end
+  $var wire 8 W$ io_y_post_0_3 [7:0] $end
+  $var wire 8 X$ io_y_post_0_4 [7:0] $end
+  $var wire 8 Y$ io_y_post_0_5 [7:0] $end
+  $var wire 8 Z$ io_y_post_0_6 [7:0] $end
+  $var wire 8 [$ io_y_post_0_7 [7:0] $end
+  $var wire 8 \$ io_y_post_0_8 [7:0] $end
+  $var wire 8 ]$ io_y_post_0_9 [7:0] $end
+  $var wire 8 ^$ io_y_post_0_10 [7:0] $end
+  $var wire 8 _$ io_y_post_0_11 [7:0] $end
+  $var wire 8 `$ io_y_post_0_12 [7:0] $end
+  $var wire 8 a$ io_y_post_0_13 [7:0] $end
+  $var wire 8 b$ io_y_post_0_14 [7:0] $end
+  $var wire 8 c$ io_y_post_0_15 [7:0] $end
+  $var wire 8 d$ io_y_post_0_16 [7:0] $end
+  $var wire 8 e$ io_y_post_0_17 [7:0] $end
+  $var wire 8 f$ io_y_post_0_18 [7:0] $end
+  $var wire 8 g$ io_y_post_0_19 [7:0] $end
+  $var wire 8 h$ io_y_post_0_20 [7:0] $end
+  $var wire 8 i$ io_y_post_0_21 [7:0] $end
+  $var wire 8 j$ io_y_post_0_22 [7:0] $end
+  $var wire 8 k$ io_y_post_0_23 [7:0] $end
+  $var wire 8 l$ io_y_post_0_24 [7:0] $end
+  $var wire 8 m$ io_y_post_1_0 [7:0] $end
+  $var wire 8 n$ io_y_post_1_1 [7:0] $end
+  $var wire 8 o$ io_y_post_1_2 [7:0] $end
+  $var wire 8 p$ io_y_post_1_3 [7:0] $end
+  $var wire 8 q$ io_y_post_1_4 [7:0] $end
+  $var wire 8 r$ io_y_post_1_5 [7:0] $end
+  $var wire 8 s$ io_y_post_1_6 [7:0] $end
+  $var wire 8 t$ io_y_post_1_7 [7:0] $end
+  $var wire 8 u$ io_y_post_1_8 [7:0] $end
+  $var wire 8 v$ io_y_post_1_9 [7:0] $end
+  $var wire 8 w$ io_y_post_1_10 [7:0] $end
+  $var wire 8 x$ io_y_post_1_11 [7:0] $end
+  $var wire 8 y$ io_y_post_1_12 [7:0] $end
+  $var wire 8 z$ io_y_post_1_13 [7:0] $end
+  $var wire 8 {$ io_y_post_1_14 [7:0] $end
+  $var wire 8 |$ io_y_post_1_15 [7:0] $end
+  $var wire 8 }$ io_y_post_1_16 [7:0] $end
+  $var wire 8 ~$ io_y_post_1_17 [7:0] $end
+  $var wire 8 !% io_y_post_1_18 [7:0] $end
+  $var wire 8 "% io_y_post_1_19 [7:0] $end
+  $var wire 8 #% io_y_post_1_20 [7:0] $end
+  $var wire 8 $% io_y_post_1_21 [7:0] $end
+  $var wire 8 %% io_y_post_1_22 [7:0] $end
+  $var wire 8 &% io_y_post_1_23 [7:0] $end
+  $var wire 8 '% io_y_post_1_24 [7:0] $end
+  $var wire 8 (% io_y_post_2_0 [7:0] $end
+  $var wire 8 )% io_y_post_2_1 [7:0] $end
+  $var wire 8 *% io_y_post_2_2 [7:0] $end
+  $var wire 8 +% io_y_post_2_3 [7:0] $end
+  $var wire 8 ,% io_y_post_2_4 [7:0] $end
+  $var wire 8 -% io_y_post_2_5 [7:0] $end
+  $var wire 8 .% io_y_post_2_6 [7:0] $end
+  $var wire 8 /% io_y_post_2_7 [7:0] $end
+  $var wire 8 0% io_y_post_2_8 [7:0] $end
+  $var wire 8 1% io_y_post_2_9 [7:0] $end
+  $var wire 8 2% io_y_post_2_10 [7:0] $end
+  $var wire 8 3% io_y_post_2_11 [7:0] $end
+  $var wire 8 4% io_y_post_2_12 [7:0] $end
+  $var wire 8 5% io_y_post_2_13 [7:0] $end
+  $var wire 8 6% io_y_post_2_14 [7:0] $end
+  $var wire 8 7% io_y_post_2_15 [7:0] $end
+  $var wire 8 8% io_y_post_2_16 [7:0] $end
+  $var wire 8 9% io_y_post_2_17 [7:0] $end
+  $var wire 8 :% io_y_post_2_18 [7:0] $end
+  $var wire 8 ;% io_y_post_2_19 [7:0] $end
+  $var wire 8 <% io_y_post_2_20 [7:0] $end
+  $var wire 8 =% io_y_post_2_21 [7:0] $end
+  $var wire 8 >% io_y_post_2_22 [7:0] $end
+  $var wire 8 ?% io_y_post_2_23 [7:0] $end
+  $var wire 8 @% io_y_post_2_24 [7:0] $end
+  $var wire 1 A% io_done $end
   $scope module RegularConvFull_SA_Tiled $end
    $var wire 1 *" clock $end
    $var wire 1 +" reset $end
@@ -463,7 +538,82 @@ $timescale 1ps $end
    $var wire 32 Q$ io_y_out_2_22 [31:0] $end
    $var wire 32 R$ io_y_out_2_23 [31:0] $end
    $var wire 32 S$ io_y_out_2_24 [31:0] $end
-   $var wire 1 T$ io_done $end
+   $var wire 8 T$ io_y_post_0_0 [7:0] $end
+   $var wire 8 U$ io_y_post_0_1 [7:0] $end
+   $var wire 8 V$ io_y_post_0_2 [7:0] $end
+   $var wire 8 W$ io_y_post_0_3 [7:0] $end
+   $var wire 8 X$ io_y_post_0_4 [7:0] $end
+   $var wire 8 Y$ io_y_post_0_5 [7:0] $end
+   $var wire 8 Z$ io_y_post_0_6 [7:0] $end
+   $var wire 8 [$ io_y_post_0_7 [7:0] $end
+   $var wire 8 \$ io_y_post_0_8 [7:0] $end
+   $var wire 8 ]$ io_y_post_0_9 [7:0] $end
+   $var wire 8 ^$ io_y_post_0_10 [7:0] $end
+   $var wire 8 _$ io_y_post_0_11 [7:0] $end
+   $var wire 8 `$ io_y_post_0_12 [7:0] $end
+   $var wire 8 a$ io_y_post_0_13 [7:0] $end
+   $var wire 8 b$ io_y_post_0_14 [7:0] $end
+   $var wire 8 c$ io_y_post_0_15 [7:0] $end
+   $var wire 8 d$ io_y_post_0_16 [7:0] $end
+   $var wire 8 e$ io_y_post_0_17 [7:0] $end
+   $var wire 8 f$ io_y_post_0_18 [7:0] $end
+   $var wire 8 g$ io_y_post_0_19 [7:0] $end
+   $var wire 8 h$ io_y_post_0_20 [7:0] $end
+   $var wire 8 i$ io_y_post_0_21 [7:0] $end
+   $var wire 8 j$ io_y_post_0_22 [7:0] $end
+   $var wire 8 k$ io_y_post_0_23 [7:0] $end
+   $var wire 8 l$ io_y_post_0_24 [7:0] $end
+   $var wire 8 m$ io_y_post_1_0 [7:0] $end
+   $var wire 8 n$ io_y_post_1_1 [7:0] $end
+   $var wire 8 o$ io_y_post_1_2 [7:0] $end
+   $var wire 8 p$ io_y_post_1_3 [7:0] $end
+   $var wire 8 q$ io_y_post_1_4 [7:0] $end
+   $var wire 8 r$ io_y_post_1_5 [7:0] $end
+   $var wire 8 s$ io_y_post_1_6 [7:0] $end
+   $var wire 8 t$ io_y_post_1_7 [7:0] $end
+   $var wire 8 u$ io_y_post_1_8 [7:0] $end
+   $var wire 8 v$ io_y_post_1_9 [7:0] $end
+   $var wire 8 w$ io_y_post_1_10 [7:0] $end
+   $var wire 8 x$ io_y_post_1_11 [7:0] $end
+   $var wire 8 y$ io_y_post_1_12 [7:0] $end
+   $var wire 8 z$ io_y_post_1_13 [7:0] $end
+   $var wire 8 {$ io_y_post_1_14 [7:0] $end
+   $var wire 8 |$ io_y_post_1_15 [7:0] $end
+   $var wire 8 }$ io_y_post_1_16 [7:0] $end
+   $var wire 8 ~$ io_y_post_1_17 [7:0] $end
+   $var wire 8 !% io_y_post_1_18 [7:0] $end
+   $var wire 8 "% io_y_post_1_19 [7:0] $end
+   $var wire 8 #% io_y_post_1_20 [7:0] $end
+   $var wire 8 $% io_y_post_1_21 [7:0] $end
+   $var wire 8 %% io_y_post_1_22 [7:0] $end
+   $var wire 8 &% io_y_post_1_23 [7:0] $end
+   $var wire 8 '% io_y_post_1_24 [7:0] $end
+   $var wire 8 (% io_y_post_2_0 [7:0] $end
+   $var wire 8 )% io_y_post_2_1 [7:0] $end
+   $var wire 8 *% io_y_post_2_2 [7:0] $end
+   $var wire 8 +% io_y_post_2_3 [7:0] $end
+   $var wire 8 ,% io_y_post_2_4 [7:0] $end
+   $var wire 8 -% io_y_post_2_5 [7:0] $end
+   $var wire 8 .% io_y_post_2_6 [7:0] $end
+   $var wire 8 /% io_y_post_2_7 [7:0] $end
+   $var wire 8 0% io_y_post_2_8 [7:0] $end
+   $var wire 8 1% io_y_post_2_9 [7:0] $end
+   $var wire 8 2% io_y_post_2_10 [7:0] $end
+   $var wire 8 3% io_y_post_2_11 [7:0] $end
+   $var wire 8 4% io_y_post_2_12 [7:0] $end
+   $var wire 8 5% io_y_post_2_13 [7:0] $end
+   $var wire 8 6% io_y_post_2_14 [7:0] $end
+   $var wire 8 7% io_y_post_2_15 [7:0] $end
+   $var wire 8 8% io_y_post_2_16 [7:0] $end
+   $var wire 8 9% io_y_post_2_17 [7:0] $end
+   $var wire 8 :% io_y_post_2_18 [7:0] $end
+   $var wire 8 ;% io_y_post_2_19 [7:0] $end
+   $var wire 8 <% io_y_post_2_20 [7:0] $end
+   $var wire 8 =% io_y_post_2_21 [7:0] $end
+   $var wire 8 >% io_y_post_2_22 [7:0] $end
+   $var wire 8 ?% io_y_post_2_23 [7:0] $end
+   $var wire 8 @% io_y_post_2_24 [7:0] $end
+   $var wire 1 A% io_done $end
    $var wire 32 l yReg_0_0 [31:0] $end
    $var wire 32 m yReg_0_1 [31:0] $end
    $var wire 32 n yReg_0_2 [31:0] $end
@@ -1363,7 +1513,82 @@ b00000000000000000000000000000000 P$
 b00000000000000000000000000000000 Q$
 b00000000000000000000000000000000 R$
 b00000000000000000000000000000000 S$
-0T$
+b00000000 T$
+b00000000 U$
+b00000000 V$
+b00000000 W$
+b00000000 X$
+b00000000 Y$
+b00000000 Z$
+b00000000 [$
+b00000000 \$
+b00000000 ]$
+b00000000 ^$
+b00000000 _$
+b00000000 `$
+b00000000 a$
+b00000000 b$
+b00000000 c$
+b00000000 d$
+b00000000 e$
+b00000000 f$
+b00000000 g$
+b00000000 h$
+b00000000 i$
+b00000000 j$
+b00000000 k$
+b00000000 l$
+b00000000 m$
+b00000000 n$
+b00000000 o$
+b00000000 p$
+b00000000 q$
+b00000000 r$
+b00000000 s$
+b00000000 t$
+b00000000 u$
+b00000000 v$
+b00000000 w$
+b00000000 x$
+b00000000 y$
+b00000000 z$
+b00000000 {$
+b00000000 |$
+b00000000 }$
+b00000000 ~$
+b00000000 !%
+b00000000 "%
+b00000000 #%
+b00000000 $%
+b00000000 %%
+b00000000 &%
+b00000000 '%
+b00000000 (%
+b00000000 )%
+b00000000 *%
+b00000000 +%
+b00000000 ,%
+b00000000 -%
+b00000000 .%
+b00000000 /%
+b00000000 0%
+b00000000 1%
+b00000000 2%
+b00000000 3%
+b00000000 4%
+b00000000 5%
+b00000000 6%
+b00000000 7%
+b00000000 8%
+b00000000 9%
+b00000000 :%
+b00000000 ;%
+b00000000 <%
+b00000000 =%
+b00000000 >%
+b00000000 ?%
+b00000000 @%
+0A%
 #1
 1*"
 #2
@@ -2095,6 +2320,7 @@ b001 ""
 b11111111111111111111111111110111 g#
 b00000000000000000000000000000110 "$
 b11111111111111111111111111110100 ;$
+b00000010 m$
 #56
 0*"
 #57
@@ -2624,6 +2850,7 @@ b010 ""
 b11111111111111111111111111111100 h#
 b11111111111111111111111111110110 #$
 b00000000000000000000000000000010 <$
+b00000001 )%
 #98
 0*"
 #99
@@ -3209,6 +3436,7 @@ b011 ""
 b00000000000000000000000000000001 i#
 b11111111111111111111111111111001 $$
 b00000000000000000000000000001000 =$
+b00000010 *%
 #140
 0*"
 #141
@@ -4372,6 +4600,9 @@ b000 ""
 b00000000000000000000000000000101 k#
 b00000000000000000000000000000011 &$
 b00000000000000000000000000001010 ?$
+b00000001 X$
+b00000001 q$
+b00000011 ,%
 #224
 0*"
 #225
@@ -4947,6 +5178,7 @@ b001 ""
 b11111111111111111111111111110110 l#
 b00000000000000000000000000001010 '$
 b11111111111111111111111111111000 @$
+b00000011 r$
 #266
 0*"
 #267
@@ -5544,6 +5776,7 @@ b010 ""
 b11111111111111111111111111111010 m#
 b11111111111111111111111111111101 ($
 b00000000000000000000000000000111 A$
+b00000010 .%
 #308
 0*"
 #309
@@ -6726,6 +6959,9 @@ b100 ""
 b00000000000000000000000000000100 o#
 b00000000000000000000000000001011 *$
 b00000000000000000000000000000010 C$
+b00000001 \$
+b00000011 u$
+b00000001 0%
 #392
 0*"
 #393
@@ -7275,6 +7511,7 @@ b000 ""
 b00000000000000000000000000000110 p#
 b11111111111111111111111111110110 +$
 b11111111111111111111111111111101 D$
+b00000010 ]$
 #434
 0*"
 #435
@@ -7861,6 +8098,8 @@ b001 ""
 b00000000000000000000000000001100 q#
 b11111111111111111111111111111101 ,$
 b00000000000000000000000000000011 E$
+b00000011 ^$
+b00000001 2%
 #476
 0*"
 #477
@@ -9000,6 +9239,7 @@ b011 ""
 1*"
 b11111111111111111111111111111001 s#
 b00000000000000000000000000001101 .$
+b00000011 y$
 #560
 0*"
 #561
@@ -10115,6 +10355,7 @@ b000 ""
 b11111111111111111111111111111100 u#
 b11111111111111111111111111111101 0$
 b00000000000000000000000000000100 I$
+b00000001 6%
 #644
 0*"
 #645
@@ -10700,6 +10941,7 @@ b001 ""
 b00000000000000000000000000001011 v#
 b11111111111111111111111111111001 1$
 b11111111111111111111111111111110 J$
+b00000011 c$
 #686
 0*"
 #687
@@ -11267,6 +11509,7 @@ b010 ""
 b11111111111111111111111111111101 w#
 b11111111111111111111111111111001 2$
 b00000000000000000000000000000110 K$
+b00000010 8%
 #728
 0*"
 #729
@@ -11852,6 +12095,9 @@ b011 ""
 b00000000000000000000000000000010 x#
 b00000000000000000000000000001011 3$
 b00000000000000000000000000000010 L$
+b00000001 e$
+b00000011 ~$
+b00000001 9%
 #770
 0*"
 #771
@@ -13545,6 +13791,7 @@ b001 ""
 b00000000000000000000000000010000 {#
 b11111111111111111111111111110101 6$
 b11111111111111111111111111110100 O$
+b00000100 h$
 #896
 0*"
 #897
@@ -14120,6 +14367,8 @@ b010 ""
 b11111111111111111111111111110110 |#
 b00000000000000000000000000000100 7$
 b00000000000000000000000000001000 P$
+b00000001 $%
+b00000010 =%
 #938
 0*"
 #939
@@ -14700,6 +14949,8 @@ b011 ""
 b00000000000000000000000000000101 }#
 b11111111111111111111111111111101 8$
 b00000000000000000000000000000010 Q$
+b00000001 j$
+b00000001 >%
 #980
 0*"
 #981
@@ -15264,6 +15515,8 @@ b100 ""
 b11111111111111111111111111110010 ~#
 b00000000000000000000000000000010 9$
 b00000000000000000000000000000110 R$
+b00000001 &%
+b00000010 ?%
 #1022
 0*"
 #1023
@@ -15862,4 +16115,4 @@ b11111111111111111111111111111001 S$
 1Y!
 b000 v!
 1*"
-1T$
+1A%

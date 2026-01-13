@@ -62,12 +62,12 @@ class RegularConvFull_SA_Tiled(
   val yReg = RegInit(yInit)
   io.y_out := yReg
   // -----------------------
-  // Post-processing v0 (shift=6):
+  // Post-processing v0 (shift=2):
   //   p = max(0, psum)
   //   t = (p + 2^(shift-1)) >> shift
   //   y = clamp(t, 0..255) as UInt8
   // -----------------------
-  private val POST_SHIFT = 6
+  private val POST_SHIFT = 2
   private val ROUND_ADD  = (1.U << (POST_SHIFT - 1)) // 32
 
   private def postV0(x: SInt): UInt = {

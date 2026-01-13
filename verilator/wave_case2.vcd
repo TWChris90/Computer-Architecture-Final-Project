@@ -81,7 +81,16 @@ $timescale 1ps $end
   $var wire 32 \! io_y_out_0_6 [31:0] $end
   $var wire 32 ]! io_y_out_0_7 [31:0] $end
   $var wire 32 ^! io_y_out_0_8 [31:0] $end
-  $var wire 1 _! io_done $end
+  $var wire 8 _! io_y_post_0_0 [7:0] $end
+  $var wire 8 `! io_y_post_0_1 [7:0] $end
+  $var wire 8 a! io_y_post_0_2 [7:0] $end
+  $var wire 8 b! io_y_post_0_3 [7:0] $end
+  $var wire 8 c! io_y_post_0_4 [7:0] $end
+  $var wire 8 d! io_y_post_0_5 [7:0] $end
+  $var wire 8 e! io_y_post_0_6 [7:0] $end
+  $var wire 8 f! io_y_post_0_7 [7:0] $end
+  $var wire 8 g! io_y_post_0_8 [7:0] $end
+  $var wire 1 h! io_done $end
   $scope module RegularConvFull_SA_Tiled $end
    $var wire 1 m clock $end
    $var wire 1 n reset $end
@@ -163,7 +172,16 @@ $timescale 1ps $end
    $var wire 32 \! io_y_out_0_6 [31:0] $end
    $var wire 32 ]! io_y_out_0_7 [31:0] $end
    $var wire 32 ^! io_y_out_0_8 [31:0] $end
-   $var wire 1 _! io_done $end
+   $var wire 8 _! io_y_post_0_0 [7:0] $end
+   $var wire 8 `! io_y_post_0_1 [7:0] $end
+   $var wire 8 a! io_y_post_0_2 [7:0] $end
+   $var wire 8 b! io_y_post_0_3 [7:0] $end
+   $var wire 8 c! io_y_post_0_4 [7:0] $end
+   $var wire 8 d! io_y_post_0_5 [7:0] $end
+   $var wire 8 e! io_y_post_0_6 [7:0] $end
+   $var wire 8 f! io_y_post_0_7 [7:0] $end
+   $var wire 8 g! io_y_post_0_8 [7:0] $end
+   $var wire 1 h! io_done $end
    $var wire 32 9 yReg_0_0 [31:0] $end
    $var wire 32 : yReg_0_1 [31:0] $end
    $var wire 32 ; yReg_0_2 [31:0] $end
@@ -512,7 +530,16 @@ b00000000000000000000000000000000 [!
 b00000000000000000000000000000000 \!
 b00000000000000000000000000000000 ]!
 b00000000000000000000000000000000 ^!
-0_!
+b00000000 _!
+b00000000 `!
+b00000000 a!
+b00000000 b!
+b00000000 c!
+b00000000 d!
+b00000000 e!
+b00000000 f!
+b00000000 g!
+0h!
 #1
 1m
 #2
@@ -2025,6 +2052,7 @@ b001 e
 0l
 1m
 b00000000000000000000000000000011 Y!
+b00000001 b!
 #182
 0m
 #183
@@ -2404,6 +2432,7 @@ b010 e
 0l
 1m
 b00000000000000000000000000001011 Z!
+b00000011 c!
 #224
 0m
 #225
@@ -2767,6 +2796,7 @@ b000 e
 0l
 1m
 b00000000000000000000000000001010 [!
+b00000011 d!
 #266
 0m
 #267
@@ -3137,6 +3167,7 @@ b001 e
 0l
 1m
 b00000000000000000000000000001000 \!
+b00000010 e!
 #308
 0m
 #309
@@ -3511,6 +3542,7 @@ b010 e
 0l
 1m
 b00000000000000000000000000000011 ]!
+b00000001 f!
 #350
 0m
 #351
@@ -3859,4 +3891,4 @@ b11111111111111111111111111111101 ^!
 1B
 b000 \
 1m
-1_!
+1h!

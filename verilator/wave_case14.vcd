@@ -285,7 +285,16 @@ $timescale 1ps $end
   $var wire 32 C$ io_y_out_0_6 [31:0] $end
   $var wire 32 D$ io_y_out_0_7 [31:0] $end
   $var wire 32 E$ io_y_out_0_8 [31:0] $end
-  $var wire 1 F$ io_done $end
+  $var wire 8 F$ io_y_post_0_0 [7:0] $end
+  $var wire 8 G$ io_y_post_0_1 [7:0] $end
+  $var wire 8 H$ io_y_post_0_2 [7:0] $end
+  $var wire 8 I$ io_y_post_0_3 [7:0] $end
+  $var wire 8 J$ io_y_post_0_4 [7:0] $end
+  $var wire 8 K$ io_y_post_0_5 [7:0] $end
+  $var wire 8 L$ io_y_post_0_6 [7:0] $end
+  $var wire 8 M$ io_y_post_0_7 [7:0] $end
+  $var wire 8 N$ io_y_post_0_8 [7:0] $end
+  $var wire 1 O$ io_done $end
   $scope module RegularConvFull_SA_Tiled $end
    $var wire 1 D! clock $end
    $var wire 1 E! reset $end
@@ -571,7 +580,16 @@ $timescale 1ps $end
    $var wire 32 C$ io_y_out_0_6 [31:0] $end
    $var wire 32 D$ io_y_out_0_7 [31:0] $end
    $var wire 32 E$ io_y_out_0_8 [31:0] $end
-   $var wire 1 F$ io_done $end
+   $var wire 8 F$ io_y_post_0_0 [7:0] $end
+   $var wire 8 G$ io_y_post_0_1 [7:0] $end
+   $var wire 8 H$ io_y_post_0_2 [7:0] $end
+   $var wire 8 I$ io_y_post_0_3 [7:0] $end
+   $var wire 8 J$ io_y_post_0_4 [7:0] $end
+   $var wire 8 K$ io_y_post_0_5 [7:0] $end
+   $var wire 8 L$ io_y_post_0_6 [7:0] $end
+   $var wire 8 M$ io_y_post_0_7 [7:0] $end
+   $var wire 8 N$ io_y_post_0_8 [7:0] $end
+   $var wire 1 O$ io_done $end
    $var wire 32 T yReg_0_0 [31:0] $end
    $var wire 32 U yReg_0_1 [31:0] $end
    $var wire 32 V yReg_0_2 [31:0] $end
@@ -1443,7 +1461,16 @@ b00000000000000000000000000000000 B$
 b00000000000000000000000000000000 C$
 b00000000000000000000000000000000 D$
 b00000000000000000000000000000000 E$
-0F$
+b00000000 F$
+b00000000 G$
+b00000000 H$
+b00000000 I$
+b00000000 J$
+b00000000 K$
+b00000000 L$
+b00000000 M$
+b00000000 N$
+0O$
 #1
 1D!
 #2
@@ -4245,6 +4272,7 @@ b010 <!
 0C!
 1D!
 b00000000000000000000000000001100 >$
+b00000011 G$
 #314
 0D!
 #315
@@ -5525,6 +5553,7 @@ b000 <!
 0C!
 1D!
 b00000000000000000000000000001111 ?$
+b00000100 H$
 #464
 0D!
 #465
@@ -6794,6 +6823,7 @@ b001 <!
 0C!
 1D!
 b00000000000000000000000000000011 @$
+b00000001 I$
 #614
 0D!
 #615
@@ -10618,6 +10648,7 @@ b001 <!
 0C!
 1D!
 b00000000000000000000000000001001 C$
+b00000010 L$
 #1064
 0D!
 #1065
@@ -11897,6 +11928,7 @@ b010 <!
 0C!
 1D!
 b00000000000000000000000000000011 D$
+b00000001 M$
 #1214
 0D!
 #1215
@@ -13153,10 +13185,11 @@ b100 *!
 0C!
 1D!
 b00000000000000000000000000001000 E$
+b00000010 N$
 #1364
 0D!
 #1365
 1]
 b000 *!
 1D!
-1F$
+1O$

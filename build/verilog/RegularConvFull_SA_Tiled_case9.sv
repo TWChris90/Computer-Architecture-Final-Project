@@ -784,6 +784,22 @@ module RegularConvFull_SA_Tiled(
                 io_y_out_0_13,
                 io_y_out_0_14,
                 io_y_out_0_15,
+  output [7:0]  io_y_post_0_0,
+                io_y_post_0_1,
+                io_y_post_0_2,
+                io_y_post_0_3,
+                io_y_post_0_4,
+                io_y_post_0_5,
+                io_y_post_0_6,
+                io_y_post_0_7,
+                io_y_post_0_8,
+                io_y_post_0_9,
+                io_y_post_0_10,
+                io_y_post_0_11,
+                io_y_post_0_12,
+                io_y_post_0_13,
+                io_y_post_0_14,
+                io_y_post_0_15,
   output        io_done
 );
 
@@ -806,6 +822,38 @@ module RegularConvFull_SA_Tiled(
   reg  [31:0]      yReg_0_13;
   reg  [31:0]      yReg_0_14;
   reg  [31:0]      yReg_0_15;
+  wire [32:0]      _io_y_post_0_0_rounded_T =
+    {1'h0, $signed(yReg_0_0) < 32'sh0 ? 32'h0 : yReg_0_0} + 33'h2;
+  wire [32:0]      _io_y_post_0_1_rounded_T =
+    {1'h0, $signed(yReg_0_1) < 32'sh0 ? 32'h0 : yReg_0_1} + 33'h2;
+  wire [32:0]      _io_y_post_0_2_rounded_T =
+    {1'h0, $signed(yReg_0_2) < 32'sh0 ? 32'h0 : yReg_0_2} + 33'h2;
+  wire [32:0]      _io_y_post_0_3_rounded_T =
+    {1'h0, $signed(yReg_0_3) < 32'sh0 ? 32'h0 : yReg_0_3} + 33'h2;
+  wire [32:0]      _io_y_post_0_4_rounded_T =
+    {1'h0, $signed(yReg_0_4) < 32'sh0 ? 32'h0 : yReg_0_4} + 33'h2;
+  wire [32:0]      _io_y_post_0_5_rounded_T =
+    {1'h0, $signed(yReg_0_5) < 32'sh0 ? 32'h0 : yReg_0_5} + 33'h2;
+  wire [32:0]      _io_y_post_0_6_rounded_T =
+    {1'h0, $signed(yReg_0_6) < 32'sh0 ? 32'h0 : yReg_0_6} + 33'h2;
+  wire [32:0]      _io_y_post_0_7_rounded_T =
+    {1'h0, $signed(yReg_0_7) < 32'sh0 ? 32'h0 : yReg_0_7} + 33'h2;
+  wire [32:0]      _io_y_post_0_8_rounded_T =
+    {1'h0, $signed(yReg_0_8) < 32'sh0 ? 32'h0 : yReg_0_8} + 33'h2;
+  wire [32:0]      _io_y_post_0_9_rounded_T =
+    {1'h0, $signed(yReg_0_9) < 32'sh0 ? 32'h0 : yReg_0_9} + 33'h2;
+  wire [32:0]      _io_y_post_0_10_rounded_T =
+    {1'h0, $signed(yReg_0_10) < 32'sh0 ? 32'h0 : yReg_0_10} + 33'h2;
+  wire [32:0]      _io_y_post_0_11_rounded_T =
+    {1'h0, $signed(yReg_0_11) < 32'sh0 ? 32'h0 : yReg_0_11} + 33'h2;
+  wire [32:0]      _io_y_post_0_12_rounded_T =
+    {1'h0, $signed(yReg_0_12) < 32'sh0 ? 32'h0 : yReg_0_12} + 33'h2;
+  wire [32:0]      _io_y_post_0_13_rounded_T =
+    {1'h0, $signed(yReg_0_13) < 32'sh0 ? 32'h0 : yReg_0_13} + 33'h2;
+  wire [32:0]      _io_y_post_0_14_rounded_T =
+    {1'h0, $signed(yReg_0_14) < 32'sh0 ? 32'h0 : yReg_0_14} + 33'h2;
+  wire [32:0]      _io_y_post_0_15_rounded_T =
+    {1'h0, $signed(yReg_0_15) < 32'sh0 ? 32'h0 : yReg_0_15} + 33'h2;
   reg              doneReg;
   reg  [3:0]       posReg;
   wire [3:0]       _im2col_io_oh_T = posReg / 4'h4;
@@ -1379,6 +1427,38 @@ module RegularConvFull_SA_Tiled(
   assign io_y_out_0_13 = yReg_0_13;
   assign io_y_out_0_14 = yReg_0_14;
   assign io_y_out_0_15 = yReg_0_15;
+  assign io_y_post_0_0 =
+    _io_y_post_0_0_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_0_rounded_T[9:2];
+  assign io_y_post_0_1 =
+    _io_y_post_0_1_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_1_rounded_T[9:2];
+  assign io_y_post_0_2 =
+    _io_y_post_0_2_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_2_rounded_T[9:2];
+  assign io_y_post_0_3 =
+    _io_y_post_0_3_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_3_rounded_T[9:2];
+  assign io_y_post_0_4 =
+    _io_y_post_0_4_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_4_rounded_T[9:2];
+  assign io_y_post_0_5 =
+    _io_y_post_0_5_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_5_rounded_T[9:2];
+  assign io_y_post_0_6 =
+    _io_y_post_0_6_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_6_rounded_T[9:2];
+  assign io_y_post_0_7 =
+    _io_y_post_0_7_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_7_rounded_T[9:2];
+  assign io_y_post_0_8 =
+    _io_y_post_0_8_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_8_rounded_T[9:2];
+  assign io_y_post_0_9 =
+    _io_y_post_0_9_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_9_rounded_T[9:2];
+  assign io_y_post_0_10 =
+    _io_y_post_0_10_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_10_rounded_T[9:2];
+  assign io_y_post_0_11 =
+    _io_y_post_0_11_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_11_rounded_T[9:2];
+  assign io_y_post_0_12 =
+    _io_y_post_0_12_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_12_rounded_T[9:2];
+  assign io_y_post_0_13 =
+    _io_y_post_0_13_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_13_rounded_T[9:2];
+  assign io_y_post_0_14 =
+    _io_y_post_0_14_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_14_rounded_T[9:2];
+  assign io_y_post_0_15 =
+    _io_y_post_0_15_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_15_rounded_T[9:2];
   assign io_done = doneReg;
 endmodule
 

@@ -223,7 +223,43 @@ $timescale 1ps $end
   $var wire 32 ;$ io_y_out_3_6 [31:0] $end
   $var wire 32 <$ io_y_out_3_7 [31:0] $end
   $var wire 32 =$ io_y_out_3_8 [31:0] $end
-  $var wire 1 >$ io_done $end
+  $var wire 8 >$ io_y_post_0_0 [7:0] $end
+  $var wire 8 ?$ io_y_post_0_1 [7:0] $end
+  $var wire 8 @$ io_y_post_0_2 [7:0] $end
+  $var wire 8 A$ io_y_post_0_3 [7:0] $end
+  $var wire 8 B$ io_y_post_0_4 [7:0] $end
+  $var wire 8 C$ io_y_post_0_5 [7:0] $end
+  $var wire 8 D$ io_y_post_0_6 [7:0] $end
+  $var wire 8 E$ io_y_post_0_7 [7:0] $end
+  $var wire 8 F$ io_y_post_0_8 [7:0] $end
+  $var wire 8 G$ io_y_post_1_0 [7:0] $end
+  $var wire 8 H$ io_y_post_1_1 [7:0] $end
+  $var wire 8 I$ io_y_post_1_2 [7:0] $end
+  $var wire 8 J$ io_y_post_1_3 [7:0] $end
+  $var wire 8 K$ io_y_post_1_4 [7:0] $end
+  $var wire 8 L$ io_y_post_1_5 [7:0] $end
+  $var wire 8 M$ io_y_post_1_6 [7:0] $end
+  $var wire 8 N$ io_y_post_1_7 [7:0] $end
+  $var wire 8 O$ io_y_post_1_8 [7:0] $end
+  $var wire 8 P$ io_y_post_2_0 [7:0] $end
+  $var wire 8 Q$ io_y_post_2_1 [7:0] $end
+  $var wire 8 R$ io_y_post_2_2 [7:0] $end
+  $var wire 8 S$ io_y_post_2_3 [7:0] $end
+  $var wire 8 T$ io_y_post_2_4 [7:0] $end
+  $var wire 8 U$ io_y_post_2_5 [7:0] $end
+  $var wire 8 V$ io_y_post_2_6 [7:0] $end
+  $var wire 8 W$ io_y_post_2_7 [7:0] $end
+  $var wire 8 X$ io_y_post_2_8 [7:0] $end
+  $var wire 8 Y$ io_y_post_3_0 [7:0] $end
+  $var wire 8 Z$ io_y_post_3_1 [7:0] $end
+  $var wire 8 [$ io_y_post_3_2 [7:0] $end
+  $var wire 8 \$ io_y_post_3_3 [7:0] $end
+  $var wire 8 ]$ io_y_post_3_4 [7:0] $end
+  $var wire 8 ^$ io_y_post_3_5 [7:0] $end
+  $var wire 8 _$ io_y_post_3_6 [7:0] $end
+  $var wire 8 `$ io_y_post_3_7 [7:0] $end
+  $var wire 8 a$ io_y_post_3_8 [7:0] $end
+  $var wire 1 b$ io_done $end
   $scope module RegularConvFull_SA_Tiled $end
    $var wire 1 z! clock $end
    $var wire 1 {! reset $end
@@ -447,7 +483,43 @@ $timescale 1ps $end
    $var wire 32 ;$ io_y_out_3_6 [31:0] $end
    $var wire 32 <$ io_y_out_3_7 [31:0] $end
    $var wire 32 =$ io_y_out_3_8 [31:0] $end
-   $var wire 1 >$ io_done $end
+   $var wire 8 >$ io_y_post_0_0 [7:0] $end
+   $var wire 8 ?$ io_y_post_0_1 [7:0] $end
+   $var wire 8 @$ io_y_post_0_2 [7:0] $end
+   $var wire 8 A$ io_y_post_0_3 [7:0] $end
+   $var wire 8 B$ io_y_post_0_4 [7:0] $end
+   $var wire 8 C$ io_y_post_0_5 [7:0] $end
+   $var wire 8 D$ io_y_post_0_6 [7:0] $end
+   $var wire 8 E$ io_y_post_0_7 [7:0] $end
+   $var wire 8 F$ io_y_post_0_8 [7:0] $end
+   $var wire 8 G$ io_y_post_1_0 [7:0] $end
+   $var wire 8 H$ io_y_post_1_1 [7:0] $end
+   $var wire 8 I$ io_y_post_1_2 [7:0] $end
+   $var wire 8 J$ io_y_post_1_3 [7:0] $end
+   $var wire 8 K$ io_y_post_1_4 [7:0] $end
+   $var wire 8 L$ io_y_post_1_5 [7:0] $end
+   $var wire 8 M$ io_y_post_1_6 [7:0] $end
+   $var wire 8 N$ io_y_post_1_7 [7:0] $end
+   $var wire 8 O$ io_y_post_1_8 [7:0] $end
+   $var wire 8 P$ io_y_post_2_0 [7:0] $end
+   $var wire 8 Q$ io_y_post_2_1 [7:0] $end
+   $var wire 8 R$ io_y_post_2_2 [7:0] $end
+   $var wire 8 S$ io_y_post_2_3 [7:0] $end
+   $var wire 8 T$ io_y_post_2_4 [7:0] $end
+   $var wire 8 U$ io_y_post_2_5 [7:0] $end
+   $var wire 8 V$ io_y_post_2_6 [7:0] $end
+   $var wire 8 W$ io_y_post_2_7 [7:0] $end
+   $var wire 8 X$ io_y_post_2_8 [7:0] $end
+   $var wire 8 Y$ io_y_post_3_0 [7:0] $end
+   $var wire 8 Z$ io_y_post_3_1 [7:0] $end
+   $var wire 8 [$ io_y_post_3_2 [7:0] $end
+   $var wire 8 \$ io_y_post_3_3 [7:0] $end
+   $var wire 8 ]$ io_y_post_3_4 [7:0] $end
+   $var wire 8 ^$ io_y_post_3_5 [7:0] $end
+   $var wire 8 _$ io_y_post_3_6 [7:0] $end
+   $var wire 8 `$ io_y_post_3_7 [7:0] $end
+   $var wire 8 a$ io_y_post_3_8 [7:0] $end
+   $var wire 1 b$ io_done $end
    $var wire 32 &! yReg_0_0 [31:0] $end
    $var wire 32 '! yReg_0_1 [31:0] $end
    $var wire 32 (! yReg_0_2 [31:0] $end
@@ -1340,7 +1412,43 @@ b00000000000000000000000000000000 :$
 b00000000000000000000000000000000 ;$
 b00000000000000000000000000000000 <$
 b00000000000000000000000000000000 =$
-0>$
+b00000000 >$
+b00000000 ?$
+b00000000 @$
+b00000000 A$
+b00000000 B$
+b00000000 C$
+b00000000 D$
+b00000000 E$
+b00000000 F$
+b00000000 G$
+b00000000 H$
+b00000000 I$
+b00000000 J$
+b00000000 K$
+b00000000 L$
+b00000000 M$
+b00000000 N$
+b00000000 O$
+b00000000 P$
+b00000000 Q$
+b00000000 R$
+b00000000 S$
+b00000000 T$
+b00000000 U$
+b00000000 V$
+b00000000 W$
+b00000000 X$
+b00000000 Y$
+b00000000 Z$
+b00000000 [$
+b00000000 \$
+b00000000 ]$
+b00000000 ^$
+b00000000 _$
+b00000000 `$
+b00000000 a$
+0b$
 #1
 1z!
 #2
@@ -2393,6 +2501,7 @@ b11111111111111111111111111111110 x#
 b00000000000000000000000000000001 #$
 b00000000000000000000000000000001 ,$
 b00000000000000000000000000000100 5$
+b00000001 Y$
 #74
 0z!
 #75
@@ -3285,6 +3394,7 @@ b11111111111111111111111111110011 y#
 b11111111111111111111111111110110 $$
 b11111111111111111111111111101010 -$
 b00000000000000000000000000000110 6$
+b00000010 Z$
 #134
 0z!
 #135
@@ -4160,6 +4270,8 @@ b00000000000000000000000000000001 z#
 b00000000000000000000000000010011 %$
 b11111111111111111111111111111000 .$
 b00000000000000000000000000001111 7$
+b00000101 I$
+b00000100 [$
 #194
 0z!
 #195
@@ -5037,6 +5149,8 @@ b001 r!
 b00000000000000000000000000010010 {#
 b00000000000000000000000000000100 &$
 b11111111111111111111111111101111 /$
+b00000101 A$
+b00000001 J$
 #254
 0z!
 #255
@@ -5902,6 +6016,7 @@ b11111111111111111111111111111100 |#
 b11111111111111111111111111111001 '$
 b00000000000000000000000000100011 0$
 b11111111111111111111111111111001 9$
+b00001001 T$
 #314
 0z!
 #315
@@ -7647,6 +7762,8 @@ b11111111111111111111111111110100 ~#
 b00000000000000000000000000000011 )$
 b11111111111111111111111111111011 2$
 b00000000000000000000000000000010 ;$
+b00000001 M$
+b00000001 _$
 #434
 0z!
 #435
@@ -8497,6 +8614,8 @@ b11111111111111111111111111110100 !$
 b00000000000000000000000000000100 *$
 b11111111111111111111111111111111 3$
 b00000000000000000000000000001000 <$
+b00000001 N$
+b00000010 `$
 #494
 0z!
 #495
@@ -9373,10 +9492,12 @@ b00000000000000000000000000000100 "$
 b00000000000000000000000000000001 +$
 b00000000000000000000000000000011 4$
 b11111111111111111111111111111011 =$
+b00000001 F$
+b00000001 X$
 #554
 0z!
 #555
 1J!
 b000 h!
 1z!
-1>$
+1b$

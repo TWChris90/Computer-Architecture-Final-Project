@@ -135,7 +135,34 @@ $timescale 1ps $end
   $var wire 32 }" io_y_out_2_6 [31:0] $end
   $var wire 32 ~" io_y_out_2_7 [31:0] $end
   $var wire 32 !# io_y_out_2_8 [31:0] $end
-  $var wire 1 "# io_done $end
+  $var wire 8 "# io_y_post_0_0 [7:0] $end
+  $var wire 8 ## io_y_post_0_1 [7:0] $end
+  $var wire 8 $# io_y_post_0_2 [7:0] $end
+  $var wire 8 %# io_y_post_0_3 [7:0] $end
+  $var wire 8 &# io_y_post_0_4 [7:0] $end
+  $var wire 8 '# io_y_post_0_5 [7:0] $end
+  $var wire 8 (# io_y_post_0_6 [7:0] $end
+  $var wire 8 )# io_y_post_0_7 [7:0] $end
+  $var wire 8 *# io_y_post_0_8 [7:0] $end
+  $var wire 8 +# io_y_post_1_0 [7:0] $end
+  $var wire 8 ,# io_y_post_1_1 [7:0] $end
+  $var wire 8 -# io_y_post_1_2 [7:0] $end
+  $var wire 8 .# io_y_post_1_3 [7:0] $end
+  $var wire 8 /# io_y_post_1_4 [7:0] $end
+  $var wire 8 0# io_y_post_1_5 [7:0] $end
+  $var wire 8 1# io_y_post_1_6 [7:0] $end
+  $var wire 8 2# io_y_post_1_7 [7:0] $end
+  $var wire 8 3# io_y_post_1_8 [7:0] $end
+  $var wire 8 4# io_y_post_2_0 [7:0] $end
+  $var wire 8 5# io_y_post_2_1 [7:0] $end
+  $var wire 8 6# io_y_post_2_2 [7:0] $end
+  $var wire 8 7# io_y_post_2_3 [7:0] $end
+  $var wire 8 8# io_y_post_2_4 [7:0] $end
+  $var wire 8 9# io_y_post_2_5 [7:0] $end
+  $var wire 8 :# io_y_post_2_6 [7:0] $end
+  $var wire 8 ;# io_y_post_2_7 [7:0] $end
+  $var wire 8 <# io_y_post_2_8 [7:0] $end
+  $var wire 1 =# io_done $end
   $scope module RegularConvFull_SA_Tiled $end
    $var wire 1 X! clock $end
    $var wire 1 Y! reset $end
@@ -271,7 +298,34 @@ $timescale 1ps $end
    $var wire 32 }" io_y_out_2_6 [31:0] $end
    $var wire 32 ~" io_y_out_2_7 [31:0] $end
    $var wire 32 !# io_y_out_2_8 [31:0] $end
-   $var wire 1 "# io_done $end
+   $var wire 8 "# io_y_post_0_0 [7:0] $end
+   $var wire 8 ## io_y_post_0_1 [7:0] $end
+   $var wire 8 $# io_y_post_0_2 [7:0] $end
+   $var wire 8 %# io_y_post_0_3 [7:0] $end
+   $var wire 8 &# io_y_post_0_4 [7:0] $end
+   $var wire 8 '# io_y_post_0_5 [7:0] $end
+   $var wire 8 (# io_y_post_0_6 [7:0] $end
+   $var wire 8 )# io_y_post_0_7 [7:0] $end
+   $var wire 8 *# io_y_post_0_8 [7:0] $end
+   $var wire 8 +# io_y_post_1_0 [7:0] $end
+   $var wire 8 ,# io_y_post_1_1 [7:0] $end
+   $var wire 8 -# io_y_post_1_2 [7:0] $end
+   $var wire 8 .# io_y_post_1_3 [7:0] $end
+   $var wire 8 /# io_y_post_1_4 [7:0] $end
+   $var wire 8 0# io_y_post_1_5 [7:0] $end
+   $var wire 8 1# io_y_post_1_6 [7:0] $end
+   $var wire 8 2# io_y_post_1_7 [7:0] $end
+   $var wire 8 3# io_y_post_1_8 [7:0] $end
+   $var wire 8 4# io_y_post_2_0 [7:0] $end
+   $var wire 8 5# io_y_post_2_1 [7:0] $end
+   $var wire 8 6# io_y_post_2_2 [7:0] $end
+   $var wire 8 7# io_y_post_2_3 [7:0] $end
+   $var wire 8 8# io_y_post_2_4 [7:0] $end
+   $var wire 8 9# io_y_post_2_5 [7:0] $end
+   $var wire 8 :# io_y_post_2_6 [7:0] $end
+   $var wire 8 ;# io_y_post_2_7 [7:0] $end
+   $var wire 8 <# io_y_post_2_8 [7:0] $end
+   $var wire 1 =# io_done $end
    $var wire 32 l yReg_0_0 [31:0] $end
    $var wire 32 m yReg_0_1 [31:0] $end
    $var wire 32 n yReg_0_2 [31:0] $end
@@ -931,7 +985,34 @@ b00000000000000000000000000000000 |"
 b00000000000000000000000000000000 }"
 b00000000000000000000000000000000 ~"
 b00000000000000000000000000000000 !#
-0"#
+b00000000 "#
+b00000000 ##
+b00000000 $#
+b00000000 %#
+b00000000 &#
+b00000000 '#
+b00000000 (#
+b00000000 )#
+b00000000 *#
+b00000000 +#
+b00000000 ,#
+b00000000 -#
+b00000000 .#
+b00000000 /#
+b00000000 0#
+b00000000 1#
+b00000000 2#
+b00000000 3#
+b00000000 4#
+b00000000 5#
+b00000000 6#
+b00000000 7#
+b00000000 8#
+b00000000 9#
+b00000000 :#
+b00000000 ;#
+b00000000 <#
+0=#
 #1
 1X!
 #2
@@ -1541,6 +1622,7 @@ b001 P!
 b11111111111111111111111111111111 e"
 b00000000000000000000000000000110 n"
 b11111111111111111111111111111110 w"
+b00000010 +#
 #56
 0X!
 #57
@@ -2121,6 +2203,9 @@ b010 P!
 b00000000000000000000000000000101 f"
 b00000000000000000000000000000101 o"
 b00000000000000000000000000001011 x"
+b00000001 ##
+b00000001 ,#
+b00000011 5#
 #98
 0X!
 #99
@@ -2713,6 +2798,8 @@ b000 P!
 b00000000000000000000000000001000 g"
 b00000000000000000000000000000101 p"
 b11111111111111111111111111111110 y"
+b00000010 $#
+b00000001 -#
 #140
 0X!
 #141
@@ -3258,6 +3345,7 @@ b001 P!
 1X!
 b00000000000000000000000000000011 h"
 b11111111111111111111111111110011 z"
+b00000001 %#
 #182
 0X!
 #183
@@ -3839,6 +3927,8 @@ b010 P!
 b00000000000000000000000000000110 i"
 b11111111111111111111111111111100 r"
 b00000000000000000000000000010011 {"
+b00000010 &#
+b00000101 8#
 #224
 0X!
 #225
@@ -4449,6 +4539,7 @@ b000 P!
 b11111111111111111111111111111011 j"
 b00000000000000000000000000001001 s"
 b11111111111111111111111111101101 |"
+b00000010 0#
 #266
 0X!
 #267
@@ -4994,6 +5085,8 @@ b001 P!
 b00000000000000000000000000000101 k"
 b00000000000000000000000000001000 t"
 b11111111111111111111111111110011 }"
+b00000001 (#
+b00000010 1#
 #308
 0X!
 #309
@@ -5520,6 +5613,7 @@ b010 P!
 b00000000000000000000000000000011 l"
 b11111111111111111111111111111011 u"
 b11111111111111111111111111111111 ~"
+b00000001 )#
 #350
 0X!
 #351
@@ -6081,10 +6175,12 @@ b100 F!
 b00000000000000000000000000000101 m"
 b00000000000000000000000000001101 v"
 b11111111111111111111111111111111 !#
+b00000001 *#
+b00000011 3#
 #392
 0X!
 #393
 1)!
 b000 F!
 1X!
-1"#
+1=#

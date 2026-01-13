@@ -5,21 +5,13 @@ import numpy as np
 BASE_DIR = "tests/vectors_sa_tiled"
 NUM_CASES = 16
 
+
 def read_txt_ints(path: str) -> np.ndarray:
     return np.loadtxt(path, dtype=np.int64)
 
-def pick_observed_path(case_dir: str) -> str:
-    """
-    Prefer verilator output if it exists; otherwise fall back to default.
-    """
-    p_veri = os.path.join(case_dir, "observed_verilator.txt")
-    p_def  = os.path.join(case_dir, "observed.txt")
-    if os.path.exists(p_veri):
-        return p_veri
-    return p_def
 
 def decode_m_pos(npz, idx: int, total_len: int):
-    # support both Cout and cout
+    """Decode flat index -> (m, pos) using Cout/cout from npz."""
     Cout = None
     if "Cout" in npz.files:
         Cout = int(npz["Cout"])
@@ -27,18 +19,25 @@ def decode_m_pos(npz, idx: int, total_len: int):
         Cout = int(npz["cout"])
     if not Cout or Cout <= 0:
         return None
-    outSize = total_len // Cout
-    m = idx // outSize
-    pos = idx % outSize
-    return (m, pos)
+    out_size = total_len // Cout
+    return (idx // out_size, idx % out_size)
+
 
 def compare_flat(case_tag: str, npz, key_golden: str, obs_txt: str, cid: int) -> int:
     """Compare npz[key_golden] (flatten) vs obs_txt (flatten)."""
-    y_golden = npz[key_golden].astype(np.int64).reshape(-1)  # flatten (m,pos)
+    if key_golden not in npz.files:
+        print(f"[case{cid}] {case_tag} missing key '{key_golden}' in data.npz")
+        return 1
+    if not os.path.exists(obs_txt):
+        print(f"[case{cid}] {case_tag} observed file not found: {obs_txt}")
+        return 1
+
+    y_golden = npz[key_golden].astype(np.int64).reshape(-1)
     y_obs = read_txt_ints(obs_txt).astype(np.int64).reshape(-1)
 
     if y_golden.shape != y_obs.shape:
         print(f"[case{cid}] {case_tag} shape mismatch: golden={y_golden.shape}, obs={y_obs.shape}")
+        print(f"         -> obs_file={obs_txt}")
         return 1
 
     diff_idx = np.nonzero(y_obs != y_golden)[0]
@@ -54,34 +53,38 @@ def compare_flat(case_tag: str, npz, key_golden: str, obs_txt: str, cid: int) ->
 
     return 0
 
-def main():
+
+def main() -> int:
+    """
+    ChiselTest workflow comparator (CONV + POST).
+
+    IMPORTANT:
+      - CONV compares against observed.txt
+      - POST compares against observed_post.txt
+      - It intentionally ignores observed_verilator.txt to avoid stale/mixed outputs.
+    """
+
     for cid in range(NUM_CASES):
         d = os.path.join(BASE_DIR, f"case{cid}")
         npz = np.load(os.path.join(d, "data.npz"))
 
-        # 1) Conv correctness: y vs observed(.txt or _verilator.txt)
-        obs_conv = pick_observed_path(d)
+        # 1) CONV correctness: y vs observed.txt (ChiselTest)
         ret = compare_flat(
             case_tag="CONV",
             npz=npz,
             key_golden="y",
-            obs_txt=obs_conv,
+            obs_txt=os.path.join(d, "observed.txt"),
             cid=cid,
         )
         if ret != 0:
             return ret
 
-        # 2) Postproc correctness: y_post vs observed_post.txt
-        if "y_post" not in npz.files:
-            print(f"[case{cid}] POST missing key 'y_post' in data.npz (regenerate vectors with y_post)")
-            return 1
-
-        obs_post = os.path.join(d, "observed_post.txt")
+        # 2) POST correctness: y_post vs observed_post.txt (ChiselTest)
         ret = compare_flat(
             case_tag="POST",
             npz=npz,
             key_golden="y_post",
-            obs_txt=obs_post,
+            obs_txt=os.path.join(d, "observed_post.txt"),
             cid=cid,
         )
         if ret != 0:
@@ -91,6 +94,7 @@ def main():
 
     print("ALL PASS")
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())

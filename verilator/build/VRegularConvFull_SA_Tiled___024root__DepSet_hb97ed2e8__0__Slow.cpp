@@ -76,6 +76,151 @@ VL_ATTR_COLD void VRegularConvFull_SA_Tiled___024root___stl_sequent__TOP__0(VReg
     if (false && vlSelf) {}  // Prevent unused
     VRegularConvFull_SA_Tiled__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VRegularConvFull_SA_Tiled___024root___stl_sequent__TOP__0\n"); );
+    // Init
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_0_0_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_0_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_0_1_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_1_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_0_2_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_2_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_0_3_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_3_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_0_4_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_4_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_0_5_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_5_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_0_6_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_6_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_0_7_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_7_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_0_8_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_8_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_1_0_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_0_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_1_1_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_1_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_1_2_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_2_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_1_3_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_3_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_1_4_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_4_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_1_5_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_5_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_1_6_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_6_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_1_7_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_7_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_1_8_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_8_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_2_0_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_0_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_2_1_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_1_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_2_2_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_2_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_2_3_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_3_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_2_4_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_4_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_2_5_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_5_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_2_6_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_6_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_2_7_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_7_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_2_8_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_8_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_3_0_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_0_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_3_1_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_1_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_3_2_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_2_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_3_3_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_3_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_3_4_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_4_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_3_5_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_5_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_3_6_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_6_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_3_7_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_7_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_3_8_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_8_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_4_0_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_0_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_4_1_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_1_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_4_2_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_2_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_4_3_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_3_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_4_4_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_4_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_4_5_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_5_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_4_6_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_6_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_4_7_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_7_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_4_8_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_8_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_5_0_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_0_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_5_1_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_1_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_5_2_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_2_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_5_3_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_3_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_5_4_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_4_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_5_5_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_5_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_5_6_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_6_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_5_7_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_7_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_5_8_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_8_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_6_0_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_0_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_6_1_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_1_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_6_2_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_2_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_6_3_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_3_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_6_4_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_4_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_6_5_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_5_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_6_6_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_6_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_6_7_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_7_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_6_8_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_8_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_7_0_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_0_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_7_1_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_1_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_7_2_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_2_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_7_3_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_3_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_7_4_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_4_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_7_5_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_5_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_7_6_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_6_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_7_7_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_7_rounded_T = 0;
+    QData/*32:0*/ RegularConvFull_SA_Tiled__DOT___io_y_post_7_8_rounded_T;
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_8_rounded_T = 0;
     // Body
     vlSelf->RegularConvFull_SA_Tiled__DOT___GEN_7 = 
         (0U == (IData)(vlSelf->RegularConvFull_SA_Tiled__DOT__state));
@@ -158,6 +303,366 @@ VL_ATTR_COLD void VRegularConvFull_SA_Tiled___024root___stl_sequent__TOP__0(VReg
         = ((0U != (IData)(vlSelf->RegularConvFull_SA_Tiled__DOT__state)) 
            & ((~ (IData)(vlSelf->RegularConvFull_SA_Tiled__DOT__im2col__DOT__running)) 
               & (1U == (IData)(vlSelf->RegularConvFull_SA_Tiled__DOT__state))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_0_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_0)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_0)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_1_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_1)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_1)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_2_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_2)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_2)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_3_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_3)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_3)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_4_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_4)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_4)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_5_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_5)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_5)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_6_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_6)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_6)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_7_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_7)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_7)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_0_8_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_8)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_0_8)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_0_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_0)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_0)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_1_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_1)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_1)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_2_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_2)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_2)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_3_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_3)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_3)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_4_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_4)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_4)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_5_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_5)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_5)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_6_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_6)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_6)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_7_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_7)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_7)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_1_8_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_8)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_1_8)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_0_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_0)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_0)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_1_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_1)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_1)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_2_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_2)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_2)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_3_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_3)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_3)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_4_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_4)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_4)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_5_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_5)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_5)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_6_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_6)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_6)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_7_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_7)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_7)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_2_8_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_8)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_2_8)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_0_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_0)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_0)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_1_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_1)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_1)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_2_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_2)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_2)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_3_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_3)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_3)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_4_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_4)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_4)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_5_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_5)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_5)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_6_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_6)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_6)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_7_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_7)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_7)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_3_8_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_8)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_3_8)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_0_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_0)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_0)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_1_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_1)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_1)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_2_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_2)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_2)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_3_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_3)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_3)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_4_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_4)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_4)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_5_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_5)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_5)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_6_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_6)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_6)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_7_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_7)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_7)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_4_8_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_8)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_4_8)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_0_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_0)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_0)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_1_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_1)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_1)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_2_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_2)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_2)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_3_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_3)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_3)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_4_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_4)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_4)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_5_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_5)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_5)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_6_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_6)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_6)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_7_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_7)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_7)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_5_8_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_8)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_5_8)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_0_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_0)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_0)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_1_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_1)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_1)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_2_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_2)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_2)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_3_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_3)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_3)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_4_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_4)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_4)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_5_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_5)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_5)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_6_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_6)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_6)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_7_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_7)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_7)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_6_8_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_8)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_6_8)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_0_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_0)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_0)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_1_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_1)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_1)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_2_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_2)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_2)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_3_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_3)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_3)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_4_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_4)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_4)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_5_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_5)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_5)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_6_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_6)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_6)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_7_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_7)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_7)))));
+    RegularConvFull_SA_Tiled__DOT___io_y_post_7_8_rounded_T 
+        = (0x1ffffffffULL & (2ULL + (QData)((IData)(
+                                                    (VL_GTS_III(32, 0U, vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_8)
+                                                      ? 0U
+                                                      : vlSelf->RegularConvFull_SA_Tiled__DOT__yReg_7_8)))));
     if (vlSelf->RegularConvFull_SA_Tiled__DOT__compBufSel) {
         vlSelf->RegularConvFull_SA_Tiled__DOT____Vcellinp__core__io_x_tile_0 
             = vlSelf->RegularConvFull_SA_Tiled__DOT__buf1_0;
@@ -2458,6 +2963,438 @@ VL_ATTR_COLD void VRegularConvFull_SA_Tiled___024root___stl_sequent__TOP__0(VReg
                       >> 8U) | (((IData)(vlSelf->io_w_in_7_0) 
                                  >> 0x10U) | ((IData)(vlSelf->io_w_in_7_0) 
                                               >> 0x18U)))))));
+    vlSelf->io_y_post_0_0 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_0_0_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_0_0_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_0_1 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_0_1_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_0_1_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_0_2 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_0_2_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_0_2_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_0_3 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_0_3_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_0_3_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_0_4 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_0_4_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_0_4_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_0_5 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_0_5_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_0_5_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_0_6 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_0_6_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_0_6_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_0_7 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_0_7_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_0_7_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_0_8 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_0_8_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_0_8_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_1_0 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_1_0_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_1_0_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_1_1 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_1_1_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_1_1_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_1_2 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_1_2_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_1_2_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_1_3 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_1_3_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_1_3_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_1_4 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_1_4_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_1_4_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_1_5 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_1_5_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_1_5_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_1_6 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_1_6_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_1_6_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_1_7 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_1_7_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_1_7_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_1_8 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_1_8_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_1_8_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_2_0 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_2_0_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_2_0_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_2_1 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_2_1_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_2_1_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_2_2 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_2_2_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_2_2_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_2_3 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_2_3_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_2_3_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_2_4 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_2_4_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_2_4_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_2_5 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_2_5_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_2_5_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_2_6 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_2_6_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_2_6_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_2_7 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_2_7_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_2_7_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_2_8 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_2_8_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_2_8_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_3_0 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_3_0_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_3_0_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_3_1 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_3_1_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_3_1_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_3_2 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_3_2_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_3_2_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_3_3 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_3_3_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_3_3_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_3_4 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_3_4_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_3_4_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_3_5 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_3_5_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_3_5_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_3_6 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_3_6_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_3_6_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_3_7 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_3_7_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_3_7_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_3_8 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_3_8_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_3_8_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_4_0 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_4_0_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_4_0_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_4_1 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_4_1_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_4_1_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_4_2 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_4_2_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_4_2_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_4_3 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_4_3_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_4_3_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_4_4 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_4_4_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_4_4_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_4_5 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_4_5_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_4_5_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_4_6 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_4_6_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_4_6_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_4_7 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_4_7_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_4_7_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_4_8 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_4_8_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_4_8_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_5_0 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_5_0_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_5_0_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_5_1 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_5_1_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_5_1_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_5_2 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_5_2_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_5_2_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_5_3 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_5_3_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_5_3_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_5_4 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_5_4_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_5_4_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_5_5 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_5_5_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_5_5_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_5_6 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_5_6_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_5_6_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_5_7 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_5_7_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_5_7_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_5_8 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_5_8_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_5_8_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_6_0 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_6_0_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_6_0_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_6_1 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_6_1_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_6_1_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_6_2 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_6_2_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_6_2_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_6_3 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_6_3_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_6_3_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_6_4 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_6_4_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_6_4_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_6_5 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_6_5_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_6_5_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_6_6 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_6_6_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_6_6_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_6_7 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_6_7_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_6_7_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_6_8 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_6_8_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_6_8_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_7_0 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_7_0_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_7_0_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_7_1 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_7_1_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_7_1_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_7_2 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_7_2_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_7_2_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_7_3 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_7_3_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_7_3_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_7_4 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_7_4_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_7_4_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_7_5 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_7_5_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_7_5_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_7_6 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_7_6_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_7_6_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_7_7 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_7_7_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_7_7_rounded_T 
+                                                          >> 2U))));
+    vlSelf->io_y_post_7_8 = ((0xfeU < (0x7fffffffU 
+                                       & (IData)((RegularConvFull_SA_Tiled__DOT___io_y_post_7_8_rounded_T 
+                                                  >> 2U))))
+                              ? 0xffU : (0xffU & (IData)(
+                                                         (RegularConvFull_SA_Tiled__DOT___io_y_post_7_8_rounded_T 
+                                                          >> 2U))));
     vlSelf->__VdfgTmp_h253f9622__0 = ((0xff00U & ((- (IData)(
                                                              (1U 
                                                               & ((IData)(vlSelf->RegularConvFull_SA_Tiled__DOT____Vcellinp__core__io_x_tile_0) 

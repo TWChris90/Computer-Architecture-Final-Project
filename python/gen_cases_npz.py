@@ -7,12 +7,16 @@ NUM_CASES = 16
 BASE_DIR = "tests/vectors_sa_tiled"
 
 # ===== MUST MATCH Scala Spec =====
-Cin = 1
-Cout = 1
 H = W = 5
 Kh = Kw = 3
 stride = 1
 pad = 0
+
+# 16 cases: (Cin, Cout) = (1,2,4,8) x (1,2,4,8)
+CINS  = [1, 2, 4, 8]
+COUTS = [1, 2, 4, 8]
+
+KTILE = 8
 
 LOW, HIGH = -2, 3  # randint in [LOW, HIGH)
 
@@ -23,8 +27,17 @@ def write_case(case_id: int, seed: int):
     np.random.seed(seed)
     torch.manual_seed(seed)
 
-    x = torch.randint(low=LOW, high=HIGH, size=(1, Cin, H, W), dtype=torch.int64)
-    w = torch.randint(low=LOW, high=HIGH, size=(Cout, Cin, Kh, Kw), dtype=torch.int64)
+    # case_id -> (cin, cout)
+    cin  = CINS[case_id // 4]
+    cout = COUTS[case_id % 4]
+
+    x = torch.randint(low=LOW, high=HIGH, size=(1, cin, H, W), dtype=torch.int64)
+    w = torch.randint(low=LOW, high=HIGH, size=(cout, cin, Kh, Kw), dtype=torch.int64)
+
+    # write meta.txt: cin cout h w kh kw kTile
+    meta_path = os.path.join(outdir, "meta.txt")
+    with open(meta_path, "w") as f:
+        f.write(f"{cin}\n{cout}\n{H}\n{W}\n{Kh}\n{Kw}\n{KTILE}\n")
 
     # PyTorch golden (cross-correlation)
     y = F.conv2d(x, w, bias=None, stride=stride, padding=pad)  # (1,Cout,Hout,Wout)
@@ -33,7 +46,7 @@ def write_case(case_id: int, seed: int):
 
     # input.txt: x_in(c)(p), p = ih*W + iw, c-major
     input_flat = []
-    for c in range(Cin):
+    for c in range(cin):
         for p in range(H * W):
             ih = p // W
             iw = p % W
@@ -41,23 +54,23 @@ def write_case(case_id: int, seed: int):
 
     # weight.txt: w_in(m)(k), k order = c->kh->kw, m-major
     weight_flat = []
-    for m in range(Cout):
-        for c in range(Cin):
+    for m in range(cout):
+        for c in range(cin):
             for kh in range(Kh):
                 for kw in range(Kw):
                     weight_flat.append(int(w[m, c, kh, kw].item()))
 
     # canonical golden y: (m,pos), pos = oh*Wout + ow
-    y_golden = y[0].reshape(Cout, outSize).contiguous()  # (Cout, outSize)
+    y_golden = y[0].reshape(cout, outSize).contiguous()  # (Cout, outSize)
     y_flat = [int(v) for v in y_golden.reshape(-1).tolist()]  # m-major, pos-minor
 
     np.savetxt(os.path.join(outdir, "input.txt"),  np.array(input_flat, dtype=np.int64), fmt="%d")
     np.savetxt(os.path.join(outdir, "weight.txt"), np.array(weight_flat, dtype=np.int64), fmt="%d")
     
-    POST_SHIFT = 6
+    POST_SHIFT = 2
     ROUND_ADD = 1 << (POST_SHIFT - 1)   # 32
 
-    def post_v0_flat(y_flat, shift=6):
+    def post_v0_flat(y_flat, shift=2):
         add = 1 << (shift - 1)
         out = []
         for v in y_flat:
@@ -78,11 +91,11 @@ def write_case(case_id: int, seed: int):
         w=np.array(weight_flat, dtype=np.int64),
         y=np.array(y_flat, dtype=np.int64),  # canonical (m,pos) flatten
         y_post=np.array(y_post_flat, dtype=np.int64),    # post golden (m,pos) flatten 
-        Cin=Cin, Cout=Cout, H=H, W=W, Kh=Kh, Kw=Kw, Hout=Hout, Wout=Wout,
+        Cin=cin, Cout=cout, H=H, W=W, Kh=Kh, Kw=Kw, Hout=Hout, Wout=Wout,
         post_shift=POST_SHIFT
     )
 
-    print(f"[case{case_id}] wrote: input={len(input_flat)} weight={len(weight_flat)} y={len(y_flat)} seed={seed}")
+    print(f"[case{case_id}] Cin={cin} Cout={cout} wrote: input={len(input_flat)} weight={len(weight_flat)} y={len(y_flat)} seed={seed}")
 
 def main():
     os.makedirs(BASE_DIR, exist_ok=True)

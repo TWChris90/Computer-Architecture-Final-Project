@@ -65,7 +65,25 @@ $timescale 1ps $end
   $var wire 32 O! io_y_out_1_6 [31:0] $end
   $var wire 32 P! io_y_out_1_7 [31:0] $end
   $var wire 32 Q! io_y_out_1_8 [31:0] $end
-  $var wire 1 R! io_done $end
+  $var wire 8 R! io_y_post_0_0 [7:0] $end
+  $var wire 8 S! io_y_post_0_1 [7:0] $end
+  $var wire 8 T! io_y_post_0_2 [7:0] $end
+  $var wire 8 U! io_y_post_0_3 [7:0] $end
+  $var wire 8 V! io_y_post_0_4 [7:0] $end
+  $var wire 8 W! io_y_post_0_5 [7:0] $end
+  $var wire 8 X! io_y_post_0_6 [7:0] $end
+  $var wire 8 Y! io_y_post_0_7 [7:0] $end
+  $var wire 8 Z! io_y_post_0_8 [7:0] $end
+  $var wire 8 [! io_y_post_1_0 [7:0] $end
+  $var wire 8 \! io_y_post_1_1 [7:0] $end
+  $var wire 8 ]! io_y_post_1_2 [7:0] $end
+  $var wire 8 ^! io_y_post_1_3 [7:0] $end
+  $var wire 8 _! io_y_post_1_4 [7:0] $end
+  $var wire 8 `! io_y_post_1_5 [7:0] $end
+  $var wire 8 a! io_y_post_1_6 [7:0] $end
+  $var wire 8 b! io_y_post_1_7 [7:0] $end
+  $var wire 8 c! io_y_post_1_8 [7:0] $end
+  $var wire 1 d! io_done $end
   $scope module RegularConvFull_SA_Tiled $end
    $var wire 1 p clock $end
    $var wire 1 q reset $end
@@ -131,7 +149,25 @@ $timescale 1ps $end
    $var wire 32 O! io_y_out_1_6 [31:0] $end
    $var wire 32 P! io_y_out_1_7 [31:0] $end
    $var wire 32 Q! io_y_out_1_8 [31:0] $end
-   $var wire 1 R! io_done $end
+   $var wire 8 R! io_y_post_0_0 [7:0] $end
+   $var wire 8 S! io_y_post_0_1 [7:0] $end
+   $var wire 8 T! io_y_post_0_2 [7:0] $end
+   $var wire 8 U! io_y_post_0_3 [7:0] $end
+   $var wire 8 V! io_y_post_0_4 [7:0] $end
+   $var wire 8 W! io_y_post_0_5 [7:0] $end
+   $var wire 8 X! io_y_post_0_6 [7:0] $end
+   $var wire 8 Y! io_y_post_0_7 [7:0] $end
+   $var wire 8 Z! io_y_post_0_8 [7:0] $end
+   $var wire 8 [! io_y_post_1_0 [7:0] $end
+   $var wire 8 \! io_y_post_1_1 [7:0] $end
+   $var wire 8 ]! io_y_post_1_2 [7:0] $end
+   $var wire 8 ^! io_y_post_1_3 [7:0] $end
+   $var wire 8 _! io_y_post_1_4 [7:0] $end
+   $var wire 8 `! io_y_post_1_5 [7:0] $end
+   $var wire 8 a! io_y_post_1_6 [7:0] $end
+   $var wire 8 b! io_y_post_1_7 [7:0] $end
+   $var wire 8 c! io_y_post_1_8 [7:0] $end
+   $var wire 1 d! io_done $end
    $var wire 32 < yReg_0_0 [31:0] $end
    $var wire 32 = yReg_0_1 [31:0] $end
    $var wire 32 > yReg_0_2 [31:0] $end
@@ -452,7 +488,25 @@ b00000000000000000000000000000000 N!
 b00000000000000000000000000000000 O!
 b00000000000000000000000000000000 P!
 b00000000000000000000000000000000 Q!
-0R!
+b00000000 R!
+b00000000 S!
+b00000000 T!
+b00000000 U!
+b00000000 V!
+b00000000 W!
+b00000000 X!
+b00000000 Y!
+b00000000 Z!
+b00000000 [!
+b00000000 \!
+b00000000 ]!
+b00000000 ^!
+b00000000 _!
+b00000000 `!
+b00000000 a!
+b00000000 b!
+b00000000 c!
+0d!
 #1
 1p
 #2
@@ -726,6 +780,7 @@ b001 h
 1p
 b11111111111111111111111111111100 @!
 b00000000000000000000000000001011 I!
+b00000011 [!
 #38
 0p
 #39
@@ -966,6 +1021,7 @@ b010 h
 0o
 1p
 b00000000000000000000000000001011 A!
+b00000011 S!
 #62
 0p
 #63
@@ -1223,6 +1279,7 @@ b000 h
 1p
 b11111111111111111111111111110111 B!
 b00000000000000000000000000000111 K!
+b00000010 ]!
 #86
 0p
 #87
@@ -1744,6 +1801,7 @@ b010 h
 1p
 b11111111111111111111111111111100 D!
 b00000000000000000000000000001000 M!
+b00000010 _!
 #134
 0p
 #135
@@ -2741,10 +2799,11 @@ b100 b
 0o
 1p
 b00000000000000000000000000000100 H!
+b00000001 Z!
 #230
 0p
 #231
 1N
 b000 b
 1p
-1R!
+1d!

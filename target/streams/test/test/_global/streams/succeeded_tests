@@ -1,9 +1,9 @@
 #Successful Tests
-#Fri Jan 09 14:56:31 CST 2026
+#Tue Jan 13 23:36:28 CST 2026
 conv.ConvEngine2x2Spec=1767109416759
 conv.PEChain1x2Spec=1767105467368
 conv.RegularConvFullIm2ColSpec=1767540138340
-conv.RegularConvFull_SA_TiledNPZSpec=1767941791110
+conv.RegularConvFull_SA_TiledNPZSpec=1768318588739
 conv.RegularConvFull_SASpec=1767606246634
 conv.Im2ColStreamerNCHWSpec=1767534759546
 conv.ConvAtPointIm2ColSpec=1767534787227

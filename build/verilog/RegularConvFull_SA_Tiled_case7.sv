@@ -798,6 +798,81 @@ module RegularConvFull_SA_Tiled(
                 io_y_out_2_22,
                 io_y_out_2_23,
                 io_y_out_2_24,
+  output [7:0]  io_y_post_0_0,
+                io_y_post_0_1,
+                io_y_post_0_2,
+                io_y_post_0_3,
+                io_y_post_0_4,
+                io_y_post_0_5,
+                io_y_post_0_6,
+                io_y_post_0_7,
+                io_y_post_0_8,
+                io_y_post_0_9,
+                io_y_post_0_10,
+                io_y_post_0_11,
+                io_y_post_0_12,
+                io_y_post_0_13,
+                io_y_post_0_14,
+                io_y_post_0_15,
+                io_y_post_0_16,
+                io_y_post_0_17,
+                io_y_post_0_18,
+                io_y_post_0_19,
+                io_y_post_0_20,
+                io_y_post_0_21,
+                io_y_post_0_22,
+                io_y_post_0_23,
+                io_y_post_0_24,
+                io_y_post_1_0,
+                io_y_post_1_1,
+                io_y_post_1_2,
+                io_y_post_1_3,
+                io_y_post_1_4,
+                io_y_post_1_5,
+                io_y_post_1_6,
+                io_y_post_1_7,
+                io_y_post_1_8,
+                io_y_post_1_9,
+                io_y_post_1_10,
+                io_y_post_1_11,
+                io_y_post_1_12,
+                io_y_post_1_13,
+                io_y_post_1_14,
+                io_y_post_1_15,
+                io_y_post_1_16,
+                io_y_post_1_17,
+                io_y_post_1_18,
+                io_y_post_1_19,
+                io_y_post_1_20,
+                io_y_post_1_21,
+                io_y_post_1_22,
+                io_y_post_1_23,
+                io_y_post_1_24,
+                io_y_post_2_0,
+                io_y_post_2_1,
+                io_y_post_2_2,
+                io_y_post_2_3,
+                io_y_post_2_4,
+                io_y_post_2_5,
+                io_y_post_2_6,
+                io_y_post_2_7,
+                io_y_post_2_8,
+                io_y_post_2_9,
+                io_y_post_2_10,
+                io_y_post_2_11,
+                io_y_post_2_12,
+                io_y_post_2_13,
+                io_y_post_2_14,
+                io_y_post_2_15,
+                io_y_post_2_16,
+                io_y_post_2_17,
+                io_y_post_2_18,
+                io_y_post_2_19,
+                io_y_post_2_20,
+                io_y_post_2_21,
+                io_y_post_2_22,
+                io_y_post_2_23,
+                io_y_post_2_24,
   output        io_done
 );
 
@@ -881,6 +956,156 @@ module RegularConvFull_SA_Tiled(
   reg  [31:0]      yReg_2_22;
   reg  [31:0]      yReg_2_23;
   reg  [31:0]      yReg_2_24;
+  wire [32:0]      _io_y_post_0_0_rounded_T =
+    {1'h0, $signed(yReg_0_0) < 32'sh0 ? 32'h0 : yReg_0_0} + 33'h2;
+  wire [32:0]      _io_y_post_0_1_rounded_T =
+    {1'h0, $signed(yReg_0_1) < 32'sh0 ? 32'h0 : yReg_0_1} + 33'h2;
+  wire [32:0]      _io_y_post_0_2_rounded_T =
+    {1'h0, $signed(yReg_0_2) < 32'sh0 ? 32'h0 : yReg_0_2} + 33'h2;
+  wire [32:0]      _io_y_post_0_3_rounded_T =
+    {1'h0, $signed(yReg_0_3) < 32'sh0 ? 32'h0 : yReg_0_3} + 33'h2;
+  wire [32:0]      _io_y_post_0_4_rounded_T =
+    {1'h0, $signed(yReg_0_4) < 32'sh0 ? 32'h0 : yReg_0_4} + 33'h2;
+  wire [32:0]      _io_y_post_0_5_rounded_T =
+    {1'h0, $signed(yReg_0_5) < 32'sh0 ? 32'h0 : yReg_0_5} + 33'h2;
+  wire [32:0]      _io_y_post_0_6_rounded_T =
+    {1'h0, $signed(yReg_0_6) < 32'sh0 ? 32'h0 : yReg_0_6} + 33'h2;
+  wire [32:0]      _io_y_post_0_7_rounded_T =
+    {1'h0, $signed(yReg_0_7) < 32'sh0 ? 32'h0 : yReg_0_7} + 33'h2;
+  wire [32:0]      _io_y_post_0_8_rounded_T =
+    {1'h0, $signed(yReg_0_8) < 32'sh0 ? 32'h0 : yReg_0_8} + 33'h2;
+  wire [32:0]      _io_y_post_0_9_rounded_T =
+    {1'h0, $signed(yReg_0_9) < 32'sh0 ? 32'h0 : yReg_0_9} + 33'h2;
+  wire [32:0]      _io_y_post_0_10_rounded_T =
+    {1'h0, $signed(yReg_0_10) < 32'sh0 ? 32'h0 : yReg_0_10} + 33'h2;
+  wire [32:0]      _io_y_post_0_11_rounded_T =
+    {1'h0, $signed(yReg_0_11) < 32'sh0 ? 32'h0 : yReg_0_11} + 33'h2;
+  wire [32:0]      _io_y_post_0_12_rounded_T =
+    {1'h0, $signed(yReg_0_12) < 32'sh0 ? 32'h0 : yReg_0_12} + 33'h2;
+  wire [32:0]      _io_y_post_0_13_rounded_T =
+    {1'h0, $signed(yReg_0_13) < 32'sh0 ? 32'h0 : yReg_0_13} + 33'h2;
+  wire [32:0]      _io_y_post_0_14_rounded_T =
+    {1'h0, $signed(yReg_0_14) < 32'sh0 ? 32'h0 : yReg_0_14} + 33'h2;
+  wire [32:0]      _io_y_post_0_15_rounded_T =
+    {1'h0, $signed(yReg_0_15) < 32'sh0 ? 32'h0 : yReg_0_15} + 33'h2;
+  wire [32:0]      _io_y_post_0_16_rounded_T =
+    {1'h0, $signed(yReg_0_16) < 32'sh0 ? 32'h0 : yReg_0_16} + 33'h2;
+  wire [32:0]      _io_y_post_0_17_rounded_T =
+    {1'h0, $signed(yReg_0_17) < 32'sh0 ? 32'h0 : yReg_0_17} + 33'h2;
+  wire [32:0]      _io_y_post_0_18_rounded_T =
+    {1'h0, $signed(yReg_0_18) < 32'sh0 ? 32'h0 : yReg_0_18} + 33'h2;
+  wire [32:0]      _io_y_post_0_19_rounded_T =
+    {1'h0, $signed(yReg_0_19) < 32'sh0 ? 32'h0 : yReg_0_19} + 33'h2;
+  wire [32:0]      _io_y_post_0_20_rounded_T =
+    {1'h0, $signed(yReg_0_20) < 32'sh0 ? 32'h0 : yReg_0_20} + 33'h2;
+  wire [32:0]      _io_y_post_0_21_rounded_T =
+    {1'h0, $signed(yReg_0_21) < 32'sh0 ? 32'h0 : yReg_0_21} + 33'h2;
+  wire [32:0]      _io_y_post_0_22_rounded_T =
+    {1'h0, $signed(yReg_0_22) < 32'sh0 ? 32'h0 : yReg_0_22} + 33'h2;
+  wire [32:0]      _io_y_post_0_23_rounded_T =
+    {1'h0, $signed(yReg_0_23) < 32'sh0 ? 32'h0 : yReg_0_23} + 33'h2;
+  wire [32:0]      _io_y_post_0_24_rounded_T =
+    {1'h0, $signed(yReg_0_24) < 32'sh0 ? 32'h0 : yReg_0_24} + 33'h2;
+  wire [32:0]      _io_y_post_1_0_rounded_T =
+    {1'h0, $signed(yReg_1_0) < 32'sh0 ? 32'h0 : yReg_1_0} + 33'h2;
+  wire [32:0]      _io_y_post_1_1_rounded_T =
+    {1'h0, $signed(yReg_1_1) < 32'sh0 ? 32'h0 : yReg_1_1} + 33'h2;
+  wire [32:0]      _io_y_post_1_2_rounded_T =
+    {1'h0, $signed(yReg_1_2) < 32'sh0 ? 32'h0 : yReg_1_2} + 33'h2;
+  wire [32:0]      _io_y_post_1_3_rounded_T =
+    {1'h0, $signed(yReg_1_3) < 32'sh0 ? 32'h0 : yReg_1_3} + 33'h2;
+  wire [32:0]      _io_y_post_1_4_rounded_T =
+    {1'h0, $signed(yReg_1_4) < 32'sh0 ? 32'h0 : yReg_1_4} + 33'h2;
+  wire [32:0]      _io_y_post_1_5_rounded_T =
+    {1'h0, $signed(yReg_1_5) < 32'sh0 ? 32'h0 : yReg_1_5} + 33'h2;
+  wire [32:0]      _io_y_post_1_6_rounded_T =
+    {1'h0, $signed(yReg_1_6) < 32'sh0 ? 32'h0 : yReg_1_6} + 33'h2;
+  wire [32:0]      _io_y_post_1_7_rounded_T =
+    {1'h0, $signed(yReg_1_7) < 32'sh0 ? 32'h0 : yReg_1_7} + 33'h2;
+  wire [32:0]      _io_y_post_1_8_rounded_T =
+    {1'h0, $signed(yReg_1_8) < 32'sh0 ? 32'h0 : yReg_1_8} + 33'h2;
+  wire [32:0]      _io_y_post_1_9_rounded_T =
+    {1'h0, $signed(yReg_1_9) < 32'sh0 ? 32'h0 : yReg_1_9} + 33'h2;
+  wire [32:0]      _io_y_post_1_10_rounded_T =
+    {1'h0, $signed(yReg_1_10) < 32'sh0 ? 32'h0 : yReg_1_10} + 33'h2;
+  wire [32:0]      _io_y_post_1_11_rounded_T =
+    {1'h0, $signed(yReg_1_11) < 32'sh0 ? 32'h0 : yReg_1_11} + 33'h2;
+  wire [32:0]      _io_y_post_1_12_rounded_T =
+    {1'h0, $signed(yReg_1_12) < 32'sh0 ? 32'h0 : yReg_1_12} + 33'h2;
+  wire [32:0]      _io_y_post_1_13_rounded_T =
+    {1'h0, $signed(yReg_1_13) < 32'sh0 ? 32'h0 : yReg_1_13} + 33'h2;
+  wire [32:0]      _io_y_post_1_14_rounded_T =
+    {1'h0, $signed(yReg_1_14) < 32'sh0 ? 32'h0 : yReg_1_14} + 33'h2;
+  wire [32:0]      _io_y_post_1_15_rounded_T =
+    {1'h0, $signed(yReg_1_15) < 32'sh0 ? 32'h0 : yReg_1_15} + 33'h2;
+  wire [32:0]      _io_y_post_1_16_rounded_T =
+    {1'h0, $signed(yReg_1_16) < 32'sh0 ? 32'h0 : yReg_1_16} + 33'h2;
+  wire [32:0]      _io_y_post_1_17_rounded_T =
+    {1'h0, $signed(yReg_1_17) < 32'sh0 ? 32'h0 : yReg_1_17} + 33'h2;
+  wire [32:0]      _io_y_post_1_18_rounded_T =
+    {1'h0, $signed(yReg_1_18) < 32'sh0 ? 32'h0 : yReg_1_18} + 33'h2;
+  wire [32:0]      _io_y_post_1_19_rounded_T =
+    {1'h0, $signed(yReg_1_19) < 32'sh0 ? 32'h0 : yReg_1_19} + 33'h2;
+  wire [32:0]      _io_y_post_1_20_rounded_T =
+    {1'h0, $signed(yReg_1_20) < 32'sh0 ? 32'h0 : yReg_1_20} + 33'h2;
+  wire [32:0]      _io_y_post_1_21_rounded_T =
+    {1'h0, $signed(yReg_1_21) < 32'sh0 ? 32'h0 : yReg_1_21} + 33'h2;
+  wire [32:0]      _io_y_post_1_22_rounded_T =
+    {1'h0, $signed(yReg_1_22) < 32'sh0 ? 32'h0 : yReg_1_22} + 33'h2;
+  wire [32:0]      _io_y_post_1_23_rounded_T =
+    {1'h0, $signed(yReg_1_23) < 32'sh0 ? 32'h0 : yReg_1_23} + 33'h2;
+  wire [32:0]      _io_y_post_1_24_rounded_T =
+    {1'h0, $signed(yReg_1_24) < 32'sh0 ? 32'h0 : yReg_1_24} + 33'h2;
+  wire [32:0]      _io_y_post_2_0_rounded_T =
+    {1'h0, $signed(yReg_2_0) < 32'sh0 ? 32'h0 : yReg_2_0} + 33'h2;
+  wire [32:0]      _io_y_post_2_1_rounded_T =
+    {1'h0, $signed(yReg_2_1) < 32'sh0 ? 32'h0 : yReg_2_1} + 33'h2;
+  wire [32:0]      _io_y_post_2_2_rounded_T =
+    {1'h0, $signed(yReg_2_2) < 32'sh0 ? 32'h0 : yReg_2_2} + 33'h2;
+  wire [32:0]      _io_y_post_2_3_rounded_T =
+    {1'h0, $signed(yReg_2_3) < 32'sh0 ? 32'h0 : yReg_2_3} + 33'h2;
+  wire [32:0]      _io_y_post_2_4_rounded_T =
+    {1'h0, $signed(yReg_2_4) < 32'sh0 ? 32'h0 : yReg_2_4} + 33'h2;
+  wire [32:0]      _io_y_post_2_5_rounded_T =
+    {1'h0, $signed(yReg_2_5) < 32'sh0 ? 32'h0 : yReg_2_5} + 33'h2;
+  wire [32:0]      _io_y_post_2_6_rounded_T =
+    {1'h0, $signed(yReg_2_6) < 32'sh0 ? 32'h0 : yReg_2_6} + 33'h2;
+  wire [32:0]      _io_y_post_2_7_rounded_T =
+    {1'h0, $signed(yReg_2_7) < 32'sh0 ? 32'h0 : yReg_2_7} + 33'h2;
+  wire [32:0]      _io_y_post_2_8_rounded_T =
+    {1'h0, $signed(yReg_2_8) < 32'sh0 ? 32'h0 : yReg_2_8} + 33'h2;
+  wire [32:0]      _io_y_post_2_9_rounded_T =
+    {1'h0, $signed(yReg_2_9) < 32'sh0 ? 32'h0 : yReg_2_9} + 33'h2;
+  wire [32:0]      _io_y_post_2_10_rounded_T =
+    {1'h0, $signed(yReg_2_10) < 32'sh0 ? 32'h0 : yReg_2_10} + 33'h2;
+  wire [32:0]      _io_y_post_2_11_rounded_T =
+    {1'h0, $signed(yReg_2_11) < 32'sh0 ? 32'h0 : yReg_2_11} + 33'h2;
+  wire [32:0]      _io_y_post_2_12_rounded_T =
+    {1'h0, $signed(yReg_2_12) < 32'sh0 ? 32'h0 : yReg_2_12} + 33'h2;
+  wire [32:0]      _io_y_post_2_13_rounded_T =
+    {1'h0, $signed(yReg_2_13) < 32'sh0 ? 32'h0 : yReg_2_13} + 33'h2;
+  wire [32:0]      _io_y_post_2_14_rounded_T =
+    {1'h0, $signed(yReg_2_14) < 32'sh0 ? 32'h0 : yReg_2_14} + 33'h2;
+  wire [32:0]      _io_y_post_2_15_rounded_T =
+    {1'h0, $signed(yReg_2_15) < 32'sh0 ? 32'h0 : yReg_2_15} + 33'h2;
+  wire [32:0]      _io_y_post_2_16_rounded_T =
+    {1'h0, $signed(yReg_2_16) < 32'sh0 ? 32'h0 : yReg_2_16} + 33'h2;
+  wire [32:0]      _io_y_post_2_17_rounded_T =
+    {1'h0, $signed(yReg_2_17) < 32'sh0 ? 32'h0 : yReg_2_17} + 33'h2;
+  wire [32:0]      _io_y_post_2_18_rounded_T =
+    {1'h0, $signed(yReg_2_18) < 32'sh0 ? 32'h0 : yReg_2_18} + 33'h2;
+  wire [32:0]      _io_y_post_2_19_rounded_T =
+    {1'h0, $signed(yReg_2_19) < 32'sh0 ? 32'h0 : yReg_2_19} + 33'h2;
+  wire [32:0]      _io_y_post_2_20_rounded_T =
+    {1'h0, $signed(yReg_2_20) < 32'sh0 ? 32'h0 : yReg_2_20} + 33'h2;
+  wire [32:0]      _io_y_post_2_21_rounded_T =
+    {1'h0, $signed(yReg_2_21) < 32'sh0 ? 32'h0 : yReg_2_21} + 33'h2;
+  wire [32:0]      _io_y_post_2_22_rounded_T =
+    {1'h0, $signed(yReg_2_22) < 32'sh0 ? 32'h0 : yReg_2_22} + 33'h2;
+  wire [32:0]      _io_y_post_2_23_rounded_T =
+    {1'h0, $signed(yReg_2_23) < 32'sh0 ? 32'h0 : yReg_2_23} + 33'h2;
+  wire [32:0]      _io_y_post_2_24_rounded_T =
+    {1'h0, $signed(yReg_2_24) < 32'sh0 ? 32'h0 : yReg_2_24} + 33'h2;
   reg              doneReg;
   reg  [4:0]       posReg;
   wire [4:0]       _im2col_io_oh_T = posReg / 5'h5;
@@ -1874,6 +2099,156 @@ module RegularConvFull_SA_Tiled(
   assign io_y_out_2_22 = yReg_2_22;
   assign io_y_out_2_23 = yReg_2_23;
   assign io_y_out_2_24 = yReg_2_24;
+  assign io_y_post_0_0 =
+    _io_y_post_0_0_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_0_rounded_T[9:2];
+  assign io_y_post_0_1 =
+    _io_y_post_0_1_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_1_rounded_T[9:2];
+  assign io_y_post_0_2 =
+    _io_y_post_0_2_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_2_rounded_T[9:2];
+  assign io_y_post_0_3 =
+    _io_y_post_0_3_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_3_rounded_T[9:2];
+  assign io_y_post_0_4 =
+    _io_y_post_0_4_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_4_rounded_T[9:2];
+  assign io_y_post_0_5 =
+    _io_y_post_0_5_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_5_rounded_T[9:2];
+  assign io_y_post_0_6 =
+    _io_y_post_0_6_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_6_rounded_T[9:2];
+  assign io_y_post_0_7 =
+    _io_y_post_0_7_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_7_rounded_T[9:2];
+  assign io_y_post_0_8 =
+    _io_y_post_0_8_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_8_rounded_T[9:2];
+  assign io_y_post_0_9 =
+    _io_y_post_0_9_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_9_rounded_T[9:2];
+  assign io_y_post_0_10 =
+    _io_y_post_0_10_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_10_rounded_T[9:2];
+  assign io_y_post_0_11 =
+    _io_y_post_0_11_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_11_rounded_T[9:2];
+  assign io_y_post_0_12 =
+    _io_y_post_0_12_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_12_rounded_T[9:2];
+  assign io_y_post_0_13 =
+    _io_y_post_0_13_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_13_rounded_T[9:2];
+  assign io_y_post_0_14 =
+    _io_y_post_0_14_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_14_rounded_T[9:2];
+  assign io_y_post_0_15 =
+    _io_y_post_0_15_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_15_rounded_T[9:2];
+  assign io_y_post_0_16 =
+    _io_y_post_0_16_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_16_rounded_T[9:2];
+  assign io_y_post_0_17 =
+    _io_y_post_0_17_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_17_rounded_T[9:2];
+  assign io_y_post_0_18 =
+    _io_y_post_0_18_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_18_rounded_T[9:2];
+  assign io_y_post_0_19 =
+    _io_y_post_0_19_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_19_rounded_T[9:2];
+  assign io_y_post_0_20 =
+    _io_y_post_0_20_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_20_rounded_T[9:2];
+  assign io_y_post_0_21 =
+    _io_y_post_0_21_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_21_rounded_T[9:2];
+  assign io_y_post_0_22 =
+    _io_y_post_0_22_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_22_rounded_T[9:2];
+  assign io_y_post_0_23 =
+    _io_y_post_0_23_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_23_rounded_T[9:2];
+  assign io_y_post_0_24 =
+    _io_y_post_0_24_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_0_24_rounded_T[9:2];
+  assign io_y_post_1_0 =
+    _io_y_post_1_0_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_0_rounded_T[9:2];
+  assign io_y_post_1_1 =
+    _io_y_post_1_1_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_1_rounded_T[9:2];
+  assign io_y_post_1_2 =
+    _io_y_post_1_2_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_2_rounded_T[9:2];
+  assign io_y_post_1_3 =
+    _io_y_post_1_3_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_3_rounded_T[9:2];
+  assign io_y_post_1_4 =
+    _io_y_post_1_4_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_4_rounded_T[9:2];
+  assign io_y_post_1_5 =
+    _io_y_post_1_5_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_5_rounded_T[9:2];
+  assign io_y_post_1_6 =
+    _io_y_post_1_6_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_6_rounded_T[9:2];
+  assign io_y_post_1_7 =
+    _io_y_post_1_7_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_7_rounded_T[9:2];
+  assign io_y_post_1_8 =
+    _io_y_post_1_8_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_8_rounded_T[9:2];
+  assign io_y_post_1_9 =
+    _io_y_post_1_9_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_9_rounded_T[9:2];
+  assign io_y_post_1_10 =
+    _io_y_post_1_10_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_10_rounded_T[9:2];
+  assign io_y_post_1_11 =
+    _io_y_post_1_11_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_11_rounded_T[9:2];
+  assign io_y_post_1_12 =
+    _io_y_post_1_12_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_12_rounded_T[9:2];
+  assign io_y_post_1_13 =
+    _io_y_post_1_13_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_13_rounded_T[9:2];
+  assign io_y_post_1_14 =
+    _io_y_post_1_14_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_14_rounded_T[9:2];
+  assign io_y_post_1_15 =
+    _io_y_post_1_15_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_15_rounded_T[9:2];
+  assign io_y_post_1_16 =
+    _io_y_post_1_16_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_16_rounded_T[9:2];
+  assign io_y_post_1_17 =
+    _io_y_post_1_17_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_17_rounded_T[9:2];
+  assign io_y_post_1_18 =
+    _io_y_post_1_18_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_18_rounded_T[9:2];
+  assign io_y_post_1_19 =
+    _io_y_post_1_19_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_19_rounded_T[9:2];
+  assign io_y_post_1_20 =
+    _io_y_post_1_20_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_20_rounded_T[9:2];
+  assign io_y_post_1_21 =
+    _io_y_post_1_21_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_21_rounded_T[9:2];
+  assign io_y_post_1_22 =
+    _io_y_post_1_22_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_22_rounded_T[9:2];
+  assign io_y_post_1_23 =
+    _io_y_post_1_23_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_23_rounded_T[9:2];
+  assign io_y_post_1_24 =
+    _io_y_post_1_24_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_1_24_rounded_T[9:2];
+  assign io_y_post_2_0 =
+    _io_y_post_2_0_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_0_rounded_T[9:2];
+  assign io_y_post_2_1 =
+    _io_y_post_2_1_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_1_rounded_T[9:2];
+  assign io_y_post_2_2 =
+    _io_y_post_2_2_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_2_rounded_T[9:2];
+  assign io_y_post_2_3 =
+    _io_y_post_2_3_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_3_rounded_T[9:2];
+  assign io_y_post_2_4 =
+    _io_y_post_2_4_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_4_rounded_T[9:2];
+  assign io_y_post_2_5 =
+    _io_y_post_2_5_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_5_rounded_T[9:2];
+  assign io_y_post_2_6 =
+    _io_y_post_2_6_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_6_rounded_T[9:2];
+  assign io_y_post_2_7 =
+    _io_y_post_2_7_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_7_rounded_T[9:2];
+  assign io_y_post_2_8 =
+    _io_y_post_2_8_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_8_rounded_T[9:2];
+  assign io_y_post_2_9 =
+    _io_y_post_2_9_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_9_rounded_T[9:2];
+  assign io_y_post_2_10 =
+    _io_y_post_2_10_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_10_rounded_T[9:2];
+  assign io_y_post_2_11 =
+    _io_y_post_2_11_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_11_rounded_T[9:2];
+  assign io_y_post_2_12 =
+    _io_y_post_2_12_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_12_rounded_T[9:2];
+  assign io_y_post_2_13 =
+    _io_y_post_2_13_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_13_rounded_T[9:2];
+  assign io_y_post_2_14 =
+    _io_y_post_2_14_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_14_rounded_T[9:2];
+  assign io_y_post_2_15 =
+    _io_y_post_2_15_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_15_rounded_T[9:2];
+  assign io_y_post_2_16 =
+    _io_y_post_2_16_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_16_rounded_T[9:2];
+  assign io_y_post_2_17 =
+    _io_y_post_2_17_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_17_rounded_T[9:2];
+  assign io_y_post_2_18 =
+    _io_y_post_2_18_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_18_rounded_T[9:2];
+  assign io_y_post_2_19 =
+    _io_y_post_2_19_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_19_rounded_T[9:2];
+  assign io_y_post_2_20 =
+    _io_y_post_2_20_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_20_rounded_T[9:2];
+  assign io_y_post_2_21 =
+    _io_y_post_2_21_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_21_rounded_T[9:2];
+  assign io_y_post_2_22 =
+    _io_y_post_2_22_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_22_rounded_T[9:2];
+  assign io_y_post_2_23 =
+    _io_y_post_2_23_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_23_rounded_T[9:2];
+  assign io_y_post_2_24 =
+    _io_y_post_2_24_rounded_T[32:2] > 31'hFE ? 8'hFF : _io_y_post_2_24_rounded_T[9:2];
   assign io_done = doneReg;
 endmodule
 

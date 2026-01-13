@@ -39,8 +39,8 @@ NUM_CASES = len(CASES)
 
 LOW, HIGH = -2, 3  # randint in [LOW, HIGH)
 
-# Post-processing v0 (shift=6)
-POST_SHIFT = 6
+# Post-processing v0 (shift=2)
+POST_SHIFT = 2
 ROUND_ADD = 1 << (POST_SHIFT - 1)  # 32
 
 def post_v0_flat(y_flat):
