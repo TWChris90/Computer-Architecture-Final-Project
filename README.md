@@ -6,8 +6,8 @@ This repository contains the hardware design, software references, and lab docum
 ## Features
 - **Chisel Implementations**: Modular depthwise, pointwise, and full convolutions backed by a reusable signed dot-product primitive.
 - **Configurable Arithmetic**: Parameter inputs define tensor dimensions, filter sizes, and channel counts to explore different convolution footprints.
-- **Simulation & Testing**: ScalaTest suites run on EphemeralSimulator to validate each module with positive and negative stimuli.
-- **SystemVerilog Generation**: `ChiselStage.emitSystemVerilogFile` creates clean RTL for each convolution block with FIRTool optimizations.
+- **Simulation & Testing**: ScalaTest suites validate individual modules and the end-to-end SA + dense pipeline; Verilator is supported for SA bring-up.
+- **SystemVerilog Generation**: `ChiselStage.emitSystemVerilogFile` creates clean RTL for each convolution block and the integrated CNN top.
 - **Python References**: `dw.py`, `pw.py`, and `rc.py` reproduce the same operations in NumPy for quick sanity checks or dataset creation.
 - **Lab Artifacts**: PDF reports document design goals, derivations, and experimental outcomes for the course submission.
 
@@ -18,7 +18,10 @@ Chisel_Convolution_Module/
 ├── project/build.properties          # sbt version pin
 ├── src/main/scala/conv/Conv.scala    # Depthwise, pointwise, and regular convolution hardware
 ├── src/main/scala/conv/Main.scala    # Entry point that emits SystemVerilog for each module
+├── src/main/scala/conv/CNNTop.scala  # End-to-end conv + post + dense integration
+├── src/main/scala/conv/EmitConvDense.scala # Emit CNNTop SystemVerilog from test vectors
 ├── src/test/scala/conv/ConvSpec.scala # ScalaTest specs exercising all convolution variants
+├── src/test/scala/conv/CNNTopNPZSpec.scala # End-to-end closed-loop test (case vectors)
 ├── dw.py | pw.py | rc.py             # NumPy reference scripts for each convolution style
 ├── random_sample.py                  # Helper that generates randomized Scala tests (WIP)
 ├── EE310_Lab_4.pdf                   # Lab handout and assignment notes
@@ -53,7 +56,33 @@ Chisel_Convolution_Module/
    ```
    Inspect the generated `.sv` files before integrating them into downstream toolflows.
 
-5. **Verify with Python References (Optional)**  
+5. **Generate SystemVerilog for All Modules (including CNNTop)**  
+   Emit every module into `build/verilog/all/<ModuleName>`:
+   ```bash
+   sbt "runMain conv.EmitAll"
+   ```
+
+6. **Generate CNNTop SystemVerilog (SA + Dense)**  
+   Emit a closed-loop top module using the same vector metadata used by tests:
+   ```bash
+   sbt "runMain conv.EmitConvDense 0"
+   ```
+   Output is written to `build/verilog/CNNTop_case0.sv`.
+
+7. **End-to-End Closed-Loop Test (SA + Quant/Pool/Dequant + Dense)**  
+   This uses `tests/vectors_sa_tiled/case*` and produces `observed*.txt` files:
+   ```bash
+   sbt "testOnly conv.CNNTopNPZSpec"
+   python python/compare_npz.py
+   ```
+   To dump waveforms for case0, set `VCD=1`.
+
+8. **Verilator SA Bring-up**  
+   ```bash
+   sbt "testOnly conv.SystolicArrayVerilatorSpec"
+   ```
+
+9. **Verify with Python References (Optional)**  
    Use NumPy scripts to reproduce expected outputs or craft new stimuli. A lightweight setup looks like:
    ```bash
    python3 -m venv venv
@@ -72,6 +101,6 @@ Chisel_Convolution_Module/
 
 ## Authors
 - [Kadir Yagiz Ebil](https://github.com/YagizEbil)
-
+- [TWChris90](https://github.com/TWChris90)
 ## License
 No license file has been provided. Please contact the author before reusing this work outside the course setting.

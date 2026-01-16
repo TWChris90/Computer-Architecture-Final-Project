@@ -54,9 +54,62 @@ def compare_flat(case_tag: str, npz, key_golden: str, obs_txt: str, cid: int) ->
     return 0
 
 
+def compare_dense(npz, obs_txt: str, cid: int) -> int:
+    """Compare dense golden vs observed_dense.txt."""
+    if "y_dense" not in npz.files:
+        print(f"[case{cid}] DENSE missing key 'y_dense' in data.npz")
+        return 1
+    if not os.path.exists(obs_txt):
+        print(f"[case{cid}] DENSE observed file not found: {obs_txt}")
+        return 1
+
+    y_golden = npz["y_dense"].astype(np.int64).reshape(-1)
+    y_obs = read_txt_ints(obs_txt).astype(np.int64).reshape(-1)
+
+    if y_golden.shape != y_obs.shape:
+        print(f"[case{cid}] DENSE shape mismatch: golden={y_golden.shape}, obs={y_obs.shape}")
+        print(f"         -> obs_file={obs_txt}")
+        return 1
+
+    diff_idx = np.nonzero(y_obs != y_golden)[0]
+    if diff_idx.size > 0:
+        idx = int(diff_idx[0])
+        print(f"[case{cid}] DENSE MISMATCH at o={idx}: obs={y_obs[idx]} golden={y_golden[idx]}")
+        print(f"         -> obs_file={obs_txt}")
+        return 1
+
+    return 0
+
+
+def compare_pool_deq(npz, key_golden: str, obs_txt: str, cid: int) -> int:
+    if key_golden not in npz.files:
+        print(f"[case{cid}] POOL/DEQ missing key '{key_golden}' in data.npz")
+        return 1
+    if not os.path.exists(obs_txt):
+        print(f"[case{cid}] POOL/DEQ observed file not found: {obs_txt}")
+        return 1
+
+    y_golden = npz[key_golden].astype(np.int64).reshape(-1)
+    y_obs = read_txt_ints(obs_txt).astype(np.int64).reshape(-1)
+
+    if y_golden.shape != y_obs.shape:
+        print(f"[case{cid}] POOL/DEQ shape mismatch: golden={y_golden.shape}, obs={y_obs.shape}")
+        print(f"         -> obs_file={obs_txt}")
+        return 1
+
+    diff_idx = np.nonzero(y_obs != y_golden)[0]
+    if diff_idx.size > 0:
+        idx = int(diff_idx[0])
+        print(f"[case{cid}] POOL/DEQ MISMATCH at idx={idx}: obs={y_obs[idx]} golden={y_golden[idx]}")
+        print(f"         -> obs_file={obs_txt}")
+        return 1
+
+    return 0
+
+
 def main() -> int:
     """
-    ChiselTest workflow comparator (CONV + POST).
+    ChiselTest workflow comparator (CONV + POST + POOL + DEQ + DENSE).
 
     IMPORTANT:
       - CONV compares against observed.txt
@@ -90,7 +143,36 @@ def main() -> int:
         if ret != 0:
             return ret
 
-        print(f"[case{cid}] PASS (CONV + POST)")
+        # 3) POOL correctness: y_pool vs observed_pool.txt
+        ret = compare_pool_deq(
+            npz=npz,
+            key_golden="y_pool",
+            obs_txt=os.path.join(d, "observed_pool.txt"),
+            cid=cid,
+        )
+        if ret != 0:
+            return ret
+
+        # 4) DEQ correctness: y_deq vs observed_deq.txt
+        ret = compare_pool_deq(
+            npz=npz,
+            key_golden="y_deq",
+            obs_txt=os.path.join(d, "observed_deq.txt"),
+            cid=cid,
+        )
+        if ret != 0:
+            return ret
+
+        # 3) DENSE correctness: y_dense vs observed_dense.txt
+        ret = compare_dense(
+            npz=npz,
+            obs_txt=os.path.join(d, "observed_dense.txt"),
+            cid=cid,
+        )
+        if ret != 0:
+            return ret
+
+        print(f"[case{cid}] PASS (CONV + POST + POOL + DEQ + DENSE)")
 
     print("ALL PASS")
     return 0
