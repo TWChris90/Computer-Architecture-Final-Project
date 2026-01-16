@@ -13,3 +13,19 @@
 .bloop/
 project/target/
 target/
+# build artifacts
+target/
+project/target/
+build/
+test_run_dir/
+pointwise_output/
+regular_conv_output/
+
+# IDE
+.metals/
+.vscode/
+
+# waveforms / outputs
+*.vcd
+tests/vectors_sa_tiled/**/observed*.txt
+tests/vectors/**/observed*.txt
