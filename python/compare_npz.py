@@ -23,6 +23,38 @@ def decode_m_pos(npz, idx: int, total_len: int):
     return (idx // out_size, idx % out_size)
 
 
+def _diff_stats(y_obs: np.ndarray, y_golden: np.ndarray):
+    diff = y_obs - y_golden
+    abs_diff = np.abs(diff)
+    if abs_diff.size == 0:
+        return {
+            "count": 0,
+            "mismatch": 0,
+            "max_abs": 0,
+            "mean_abs": 0.0,
+            "rmse": 0.0,
+        }
+    mismatch = int(np.count_nonzero(diff))
+    max_abs = int(abs_diff.max())
+    mean_abs = float(abs_diff.mean())
+    rmse = float(np.sqrt(np.mean(diff.astype(np.float64) ** 2)))
+    return {
+        "count": int(abs_diff.size),
+        "mismatch": mismatch,
+        "max_abs": max_abs,
+        "mean_abs": mean_abs,
+        "rmse": rmse,
+    }
+
+
+def _print_stats(case_tag: str, cid: int, stats: dict):
+    print(
+        f"[case{cid}] {case_tag} stats: "
+        f"count={stats['count']} mismatch={stats['mismatch']} "
+        f"max_abs={stats['max_abs']} mean_abs={stats['mean_abs']:.4f} rmse={stats['rmse']:.4f}"
+    )
+
+
 def compare_flat(case_tag: str, npz, key_golden: str, obs_txt: str, cid: int) -> int:
     """Compare npz[key_golden] (flatten) vs obs_txt (flatten)."""
     if key_golden not in npz.files:
@@ -40,7 +72,8 @@ def compare_flat(case_tag: str, npz, key_golden: str, obs_txt: str, cid: int) ->
         print(f"         -> obs_file={obs_txt}")
         return 1
 
-    diff_idx = np.nonzero(y_obs != y_golden)[0]
+    diff = y_obs - y_golden
+    diff_idx = np.nonzero(diff != 0)[0]
     if diff_idx.size > 0:
         idx = int(diff_idx[0])
         print(f"[case{cid}] {case_tag} MISMATCH at idx={idx}: obs={y_obs[idx]} golden={y_golden[idx]}")
@@ -49,8 +82,12 @@ def compare_flat(case_tag: str, npz, key_golden: str, obs_txt: str, cid: int) ->
             m, pos = mp
             print(f"         -> (m={m}, pos={pos})")
         print(f"         -> obs_file={obs_txt}")
+        stats = _diff_stats(y_obs, y_golden)
+        _print_stats(case_tag, cid, stats)
         return 1
 
+    stats = _diff_stats(y_obs, y_golden)
+    _print_stats(case_tag, cid, stats)
     return 0
 
 
@@ -71,13 +108,18 @@ def compare_dense(npz, obs_txt: str, cid: int) -> int:
         print(f"         -> obs_file={obs_txt}")
         return 1
 
-    diff_idx = np.nonzero(y_obs != y_golden)[0]
+    diff = y_obs - y_golden
+    diff_idx = np.nonzero(diff != 0)[0]
     if diff_idx.size > 0:
         idx = int(diff_idx[0])
         print(f"[case{cid}] DENSE MISMATCH at o={idx}: obs={y_obs[idx]} golden={y_golden[idx]}")
         print(f"         -> obs_file={obs_txt}")
+        stats = _diff_stats(y_obs, y_golden)
+        _print_stats("DENSE", cid, stats)
         return 1
 
+    stats = _diff_stats(y_obs, y_golden)
+    _print_stats("DENSE", cid, stats)
     return 0
 
 
@@ -97,13 +139,18 @@ def compare_pool_deq(npz, key_golden: str, obs_txt: str, cid: int) -> int:
         print(f"         -> obs_file={obs_txt}")
         return 1
 
-    diff_idx = np.nonzero(y_obs != y_golden)[0]
+    diff = y_obs - y_golden
+    diff_idx = np.nonzero(diff != 0)[0]
     if diff_idx.size > 0:
         idx = int(diff_idx[0])
         print(f"[case{cid}] POOL/DEQ MISMATCH at idx={idx}: obs={y_obs[idx]} golden={y_golden[idx]}")
         print(f"         -> obs_file={obs_txt}")
+        stats = _diff_stats(y_obs, y_golden)
+        _print_stats(key_golden.upper(), cid, stats)
         return 1
 
+    stats = _diff_stats(y_obs, y_golden)
+    _print_stats(key_golden.upper(), cid, stats)
     return 0
 
 
