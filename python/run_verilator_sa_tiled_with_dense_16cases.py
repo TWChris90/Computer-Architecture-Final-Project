@@ -6,7 +6,7 @@ from pathlib import Path
 VEC_BASE = Path("tests/vectors_sa_tiled")
 SV_DIR   = Path("build/verilog")
 
-TOP_MOD   = "RegularConvFull_SA_Tiled_WithDense"
+TOP_MOD   = "CNNTop"
 NUM_CASES = 16
 
 DATA_W = 8
@@ -274,6 +274,7 @@ def build_and_run_case(case_id: int):
     "--exe",
     "--build",
     "-O3",
+    "-Wno-WIDTHEXPAND",
     "--top-module", TOP_MOD,
     "-Mdir", str(obj_dir),
     str(sv_file),

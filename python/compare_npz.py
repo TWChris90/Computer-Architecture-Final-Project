@@ -154,6 +154,21 @@ def compare_pool_deq(npz, key_golden: str, obs_txt: str, cid: int) -> int:
     return 0
 
 
+def compare_optional(case_tag: str, npz, key_golden: str, obs_txt: str, cid: int) -> int:
+    """Compare only if observed file exists; otherwise report skip."""
+    if not os.path.exists(obs_txt):
+        print(f"[case{cid}] {case_tag} SKIP (missing {obs_txt})")
+        return 0
+    return compare_flat(case_tag, npz, key_golden, obs_txt, cid)
+
+
+def compare_dense_optional(npz, obs_txt: str, cid: int) -> int:
+    if not os.path.exists(obs_txt):
+        print(f"[case{cid}] DENSE_VL SKIP (missing {obs_txt})")
+        return 0
+    return compare_dense(npz, obs_txt, cid)
+
+
 def main() -> int:
     """
     ChiselTest workflow comparator (CONV + POST + POOL + DEQ + DENSE).
@@ -220,6 +235,25 @@ def main() -> int:
             return ret
 
         print(f"[case{cid}] PASS (CONV + POST + POOL + DEQ + DENSE)")
+
+        # Optional Verilator comparisons (if outputs exist)
+        ret = compare_optional(
+            case_tag="CONV_VL",
+            npz=npz,
+            key_golden="y",
+            obs_txt=os.path.join(d, "observed_verilator.txt"),
+            cid=cid,
+        )
+        if ret != 0:
+            return ret
+
+        ret = compare_dense_optional(
+            npz=npz,
+            obs_txt=os.path.join(d, "observed_dense_verilator.txt"),
+            cid=cid,
+        )
+        if ret != 0:
+            return ret
 
     print("ALL PASS")
     return 0
